@@ -55,3 +55,28 @@ db.createCollection("Conductor",{
   }
 }
 );
+
+const baseDatos = 'WheelsBD';
+
+// Accede a la base de datos, si no está creada, la crea
+use(baseDatos);
+
+// Crear una nueva colección dentro de la base de datos
+// con los validadores especificados para Ruta
+db.createCollection("Ruta",{
+  validator:{
+    $jsonSchema: {
+      bsonType: "object",
+      required:["idRuta","puntoOrigen","puntoLlegada","cantPasajeros","horaLlegada","horaSalida"],
+      properties:{
+        idRuta: { bsonType: "string", description: "Debe ser string Único" },
+        puntoOrigen: { bsonType: "string", description: "Debe ser string" },
+        puntoLlegada: { bsonType: "string", description: "Debe ser string" },
+        cantPasajeros: { bsonType: "int", description: "Debe ser entero" },
+        horaLlegada: { bsonType: "string", description: "Debe ser string" },
+        horaSalida: { bsonType: "string", description: "Debe ser string" }
+      }
+    }
+  }
+}
+);
