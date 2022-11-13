@@ -11,18 +11,18 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloRConductorPasajero.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CPasajero.CRegistroPasajero">
    <children>
-      <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="19.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="19.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imgRef/LogoWheels.jpeg" />
          </image>
       </ImageView>
-      <Label layoutX="170.0" layoutY="43.0" prefHeight="58.0" prefWidth="175.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="REGISTRO DE" />
-      <Label layoutX="204.0" layoutY="93.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="PASAJERO">
+      <Label layoutX="170.0" layoutY="56.0" prefHeight="58.0" prefWidth="175.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="REGISTRO DE" />
+      <Label layoutX="204.0" layoutY="106.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="PASAJERO">
          <font>
             <Font name="Colonna MT" size="11.0" />
          </font>
       </Label>
-      <Line endX="92.0" layoutX="228.0" layoutY="143.0" startX="-72.0" stroke="WHITE" strokeWidth="3.0" />
+      <Line endX="92.0" layoutX="228.0" layoutY="156.0" startX="-72.0" stroke="WHITE" strokeWidth="3.0" />
       <TextField fx:id="nombreCompleto" layoutX="66.0" layoutY="190.0" prefHeight="40.0" prefWidth="230.0" promptText="Nombre Completo" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
       <TextField fx:id="correoInstitucional" layoutX="65.0" layoutY="243.0" prefHeight="40.0" prefWidth="230.0" promptText="Correo Institucional" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
       <TextField fx:id="contrasenia" layoutX="66.0" layoutY="298.0" prefHeight="40.0" prefWidth="230.0" promptText="Contraseña" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
@@ -30,5 +30,14 @@
       <TextField fx:id="numTelefono" layoutX="66.0" layoutY="407.0" prefHeight="40.0" prefWidth="230.0" promptText="Teléfono" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
       <TextField fx:id="codigoUniversidad" layoutX="65.0" layoutY="463.0" prefHeight="40.0" prefWidth="230.0" promptText="Código Universidad" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
       <Button layoutX="81.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="40.0" prefWidth="130.0" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Registrarse" />
+      <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonSalida" stylesheets="@../estilo/estiloApp.css">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoSalida.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

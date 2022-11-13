@@ -37,3 +37,8 @@
 .segundoFondo{
     -fx-background-color: #fff;
 }
+
+.botonSalida{
+    -fx-background-color: #fff;
+    -fx-background-radius: 80;
+}

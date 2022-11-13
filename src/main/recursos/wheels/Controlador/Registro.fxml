@@ -12,7 +12,7 @@
    <children>
       <Button layoutY="280.0" mnemonicParsing="false" onAction="#btnPasajero" prefHeight="280.0" prefWidth="360.0" styleClass="botonPasajero" stylesheets="@../estilo/estiloRegistro.css" text="Pasajero">
          <graphic>
-            <ImageView fitHeight="112.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="112.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgRef/PasajeroBoton.png" />
                </image>
@@ -37,5 +37,7 @@
       <Button layoutY="558.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="44.0" prefWidth="360.0" styleClass="botonSalir" stylesheets="@../estilo/estiloRegistro.css" text="Salir" />
       <Line endX="179.99996948242188" endY="-19.071044921875" layoutX="175.0" layoutY="12.0" startX="179.99996948242188" startY="575.928955078125" stroke="#1b2638" strokeWidth="10.0" />
       <Line endX="179.99996948242188" endY="-19.071044921875" layoutX="-175.0" layoutY="12.0" startX="179.99996948242188" startY="583.85791015625" stroke="#1b2638" strokeWidth="10.0" />
+      <Line endX="180.0" layoutX="178.0" layoutY="280.0" startX="-180.0" stroke="#1b2638" strokeWidth="4.0" />
+      <Line endX="165.0" layoutX="181.0" layoutY="555.0" startX="-168.00003051757812" stroke="#fdfefe" strokeWidth="4.0" />
    </children>
 </AnchorPane>

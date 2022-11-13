@@ -4,19 +4,25 @@
 .botonConductor{
     -fx-background-color: #6597b2;
     -fx-font-family: 'Concert One', cursive;
+    -fx-text-fill: #1b2638;
     -fx-font-size: 20px;
 }
 .botonConductor:hover{
+    -fx-background-color: #1b2638;
+    -fx-text-fill: #fdfefe;
     -fx-font-size: 21px;
 }
 
 .botonPasajero{
-    -fx-background-color: #a6a6a6;
+    -fx-background-color: #fdfefe;
     -fx-font-family: 'Concert One', cursive;
+    -fx-text-fill: #1b2638;
     -fx-font-size: 20px;
 }
 
 .botonPasajero:hover{
+    -fx-background-color: #1b2638;
+    -fx-text-fill: #fdfefe;
     -fx-font-size: 21px;
 }
 
