@@ -1,0 +1,33 @@
+/* .css referente a los registros*/
+/* Fuente título: Bebas Nueu*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Fuente textFields: Questrial*/
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+
+/* Color de fondo */
+.fondo-azul{
+    -fx-background-color: #6597b2;
+}
+
+/*.txtField-Generalizado{
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-background-color: #6597b2;
+    -fx-background-radius: 100;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: #fdfefe;
+    -fx-border-width: 3px;
+    -fx-text-fill: #fdfefe;
+}*/
+
+.txtField-Generalizado{
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-background-color: #fdfefe;
+    -fx-background-radius: 100;
+}
+
+.label-Titulo{
+    -fx-font-family: 'Bebas Neue', cursive;
+    -fx-font-size: 40px;
+    -fx-text-fill: #fdfefe;
+}

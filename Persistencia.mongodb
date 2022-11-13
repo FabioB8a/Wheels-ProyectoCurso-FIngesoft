@@ -1,0 +1,57 @@
+
+const baseDatos = 'WheelsBD';
+
+// Accede a la base de datos, si no está creada, la crea
+use(baseDatos);
+
+// Crear una nueva colección dentro de la base de datos 
+// con los validadores especificados para Pasajero
+db.createCollection("Pasajero",{
+  validator:{
+    $jsonSchema: {
+      bsonType: "object",
+      required:["nombreCompleto","nombreUsuario","contraseña","universidad","telefono","codigo"],
+      properties:{
+        nombreCompleto: { bsonType: "string", description: "Debe ser string" },
+        nombreUsuario: { bsonType: "string", description: "Debe ser string Único" },
+        contraseña: { bsonType: "string", description: "Debe ser string" },
+        universidad: { bsonType: "string", description: "Debe ser string" },
+        telefono: { bsonType: "string", description: "Debe ser string" },
+        codigo: { bsonType: "string", description: "Debe ser string" }
+      }
+    }
+  }
+}
+);
+
+
+const baseDatos = 'WheelsBD';
+
+// Accede a la base de datos, si no está creada, la crea
+use(baseDatos);
+
+// Crear una nueva colección dentro de la base de datos
+// con los validadores especificados para Conductor
+db.createCollection("Conductor",{
+  validator:{
+    $jsonSchema: {
+      bsonType: "object",
+      required:["nombreCompleto","nombreUsuario","contraseña","universidad","telefono","cedulaConductor","marcaAuto","modeloAuto","placaAuto","polizaAuto","chasisAuto","fechaExpAuto"],
+      properties:{
+        nombreCompleto: { bsonType: "string", description: "Debe ser string" },
+        nombreUsuario: { bsonType: "string", description: "Debe ser string Único" },
+        contraseña: { bsonType: "string", description: "Debe ser string" },
+        universidad: { bsonType: "string", description: "Debe ser string" },
+        telefono: { bsonType: "string", description: "Debe ser string" },
+        cedulaConductor: { bsonType: "string", description: "Debe ser string" },
+        marcaAuto: { bsonType: "string", description: "Debe ser string" },
+        modeloAuto: { bsonType: "string", description: "Debe ser string" },
+        placaAuto: { bsonType: "string", description: "Debe ser string" },
+        polizaAuto: { bsonType: "string", description: "Debe ser string" },
+        chasisAuto: { bsonType: "string", description: "Debe ser string" },
+        fechaExpAuto: { bsonType: "date", description: "Debe ser fecha" }
+      }
+    }
+  }
+}
+);

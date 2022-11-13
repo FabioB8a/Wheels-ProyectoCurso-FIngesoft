@@ -1,0 +1,39 @@
+/* Fuente botones*/
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+/*Fuente labels*/
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,300&display=swap');
+
+/* Color de fondo */
+.fondo-azul{
+    -fx-background-color: #6597b2;
+}
+
+/* Caracteristicas de botones */
+.botones{
+    -fx-background-color: #1b2638;
+    -fx-background-radius: 80;
+    -fx-font-family: 'Concert One', cursive;
+    -fx-font-size: 15px;
+    -fx-text-fill: #fdfefe;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 200px;
+    -fx-alignment: center;
+}
+.botones:hover{
+    -fx-background-color: #fdfefe;
+    -fx-text-fill: #1b2638;
+    -fx-border-color:#1b2638;
+    -fx-border-radius: 80;
+    -fx-border-width: 2px;
+}
+
+.label-otros{
+    -fx-font-family: 'Zilla Slab', serif;
+    -fx-font-size: 10px;
+    -fx-text-fill: #1b2638;
+    -fx-alignment: center;
+}
+
+.segundoFondo{
+    -fx-background-color: #fff;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CInicio.CRegistro">
+   <children>
+      <Button layoutY="280.0" mnemonicParsing="false" onAction="#btnPasajero" prefHeight="280.0" prefWidth="360.0" styleClass="botonPasajero" stylesheets="@../estilo/estiloRegistro.css" text="Pasajero">
+         <graphic>
+            <ImageView fitHeight="112.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/PasajeroBoton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#btnConductor" prefHeight="280.0" prefWidth="360.0" styleClass="botonConductor" stylesheets="@../estilo/estiloRegistro.css" text="Conductor" textAlignment="CENTER">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <graphic>
+            <ImageView fitHeight="115.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/ConductorBoton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutY="558.0" mnemonicParsing="false" onAction="#btnSalir" prefHeight="44.0" prefWidth="360.0" styleClass="botonSalir" stylesheets="@../estilo/estiloRegistro.css" text="Salir" />
+      <Line endX="179.99996948242188" endY="-19.071044921875" layoutX="175.0" layoutY="12.0" startX="179.99996948242188" startY="575.928955078125" stroke="#1b2638" strokeWidth="10.0" />
+      <Line endX="179.99996948242188" endY="-19.071044921875" layoutX="-175.0" layoutY="12.0" startX="179.99996948242188" startY="583.85791015625" stroke="#1b2638" strokeWidth="10.0" />
+   </children>
+</AnchorPane>
