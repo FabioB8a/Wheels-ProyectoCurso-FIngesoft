@@ -38,4 +38,9 @@ public class CRegistroPasajero {
         p.crear(new PasajeroDTO(nombreCompleto.getText(),correoInstitucional.getText(),contrasenia.getText(),universidad.getText(), numTelefono.getText(),codigoUniversidad.getText()));
         CEscenarios.cambiarVista(event,"VistaPrincipal.fxml");
     }
+
+    @FXML
+    void btnSalida(ActionEvent event) throws IOException {
+        CEscenarios.cambiarVista(event,"VistaPrincipal.fxml");
+    }
 }
