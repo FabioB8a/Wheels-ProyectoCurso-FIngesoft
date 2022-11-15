@@ -38,7 +38,18 @@
     -fx-background-color: #fff;
 }
 
-.botonSalida{
+.botonMenu{
     -fx-background-color: #fff;
     -fx-background-radius: 80;
+}
+
+.botonMenu:hover{
+    -fx-background-color: #6597b2;
+    -fx-text-fill: #6597b2;
+    -fx-border-color:#1b2638;
+    -fx-border-radius: 80
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
 }

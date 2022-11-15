@@ -8,25 +8,65 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloRConductorPasajero.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CPasajero.CInicioPasajero">
+<AnchorPane prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CPasajero.CInicioPasajero">
    <children>
-      <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="19.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="54.0">
+      <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="18.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="257.0" AnchorPane.topAnchor="71.0">
          <image>
             <Image url="@../imgRef/LogoWheels.jpeg" />
          </image>
       </ImageView>
-      <Label alignment="TOP_RIGHT" layoutX="125.0" layoutY="54.0" prefHeight="58.0" prefWidth="235.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="HOLA" AnchorPane.bottomAnchor="488.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="54.0" />
-      <Label layoutX="181.0" layoutY="98.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="PASAJERO">
+      <Label alignment="TOP_RIGHT" layoutX="124.0" layoutY="71.0" prefHeight="58.0" prefWidth="235.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloConductorPasajero.css" text="HOLA" AnchorPane.bottomAnchor="471.0" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="71.0" />
+      <Label alignment="TOP_RIGHT" layoutX="180.0" layoutY="115.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloConductorPasajero.css" text="PASAJERO">
          <font>
             <Font name="Colonna MT" size="11.0" />
          </font>
       </Label>
-      <Line endX="137.0" layoutX="228.0" layoutY="156.0" startX="-95.0" stroke="WHITE" strokeWidth="3.0" />
-      <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonSalida" stylesheets="@../estilo/estiloApp.css">
+      <Line endX="270.0" layoutX="105.0" layoutY="58.0" startX="-95.0" stroke="WHITE" />
+      <Line endX="270.0" layoutX="103.0" layoutY="191.0" startX="-95.0" stroke="WHITE" />
+      <Label layoutX="30.0" layoutY="203.0" styleClass="label-Cuerpo" stylesheets="@../estilo/estiloConductorPasajero.css" text="Nombre" />
+      <Label layoutX="30.0" layoutY="233.0" styleClass="label-Cuerpo-texto" stylesheets="@../estilo/estiloConductorPasajero.css" text="Felipe Garcia Castiblanco " />
+      <Label layoutX="30.0" layoutY="261.0" styleClass="label-Cuerpo" stylesheets="@../estilo/estiloConductorPasajero.css" text="Correo Institucional" />
+      <Label layoutX="30.0" layoutY="291.0" styleClass="label-Cuerpo-texto" stylesheets="@../estilo/estiloConductorPasajero.css" text="Felipe Garcia Castiblanco " />
+      <Label layoutX="30.0" layoutY="322.0" styleClass="label-Cuerpo" stylesheets="@../estilo/estiloConductorPasajero.css" text="Contraseña" />
+      <Label layoutX="30.0" layoutY="352.0" styleClass="label-Cuerpo-texto" stylesheets="@../estilo/estiloConductorPasajero.css" text="Felipe Garcia Castiblanco " />
+      <Label layoutX="30.0" layoutY="380.0" styleClass="label-Cuerpo" stylesheets="@../estilo/estiloConductorPasajero.css" text="Universidad" />
+      <Label layoutX="30.0" layoutY="410.0" styleClass="label-Cuerpo-texto" stylesheets="@../estilo/estiloConductorPasajero.css" text="Felipe Garcia Castiblanco " />
+      <Label layoutX="30.0" layoutY="439.0" styleClass="label-Cuerpo" stylesheets="@../estilo/estiloConductorPasajero.css" text="Teléfono" />
+      <Label layoutX="30.0" layoutY="469.0" styleClass="label-Cuerpo-texto" stylesheets="@../estilo/estiloConductorPasajero.css" text="Felipe Garcia Castiblanco " />
+      <Label layoutX="30.0" layoutY="497.0" styleClass="label-Cuerpo" stylesheets="@../estilo/estiloConductorPasajero.css" text="CódigoUniversidad" />
+      <Label layoutX="30.0" layoutY="527.0" styleClass="label-Cuerpo-texto" stylesheets="@../estilo/estiloConductorPasajero.css" text="Felipe Garcia Castiblanco " />
+      <Button mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.bottomAnchor="558.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="16.0">
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgRef/Iconos/iconoSalida.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="125.0" layoutY="16.0" mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoInicio.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="218.0" layoutY="16.0" mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoRuta.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="320.0" layoutY="16.0" mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoVolver.png" />
                </image>
             </ImageView>
          </graphic>

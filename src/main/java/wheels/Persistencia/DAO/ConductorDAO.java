@@ -28,7 +28,6 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         documento.append("placaAuto", ref.getPlacaAuto());
         documento.append("polizaAuto", ref.getPolizaAuto());
         documento.append("chasisAuto", ref.getChasisAuto());
-        documento.append("fechaExpAuto", ref.getFechaExpAuto());
 
         conductores.insertOne(documento);
     }

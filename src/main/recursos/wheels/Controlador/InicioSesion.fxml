@@ -8,13 +8,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloInicioSesion.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CInicio.CInicioSesion">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CInicio.CInicioSesion">
    <children>
       <Pane layoutX="-1.0" layoutY="286.0" prefHeight="317.0" prefWidth="360.0" styleClass="fondo-blanco" stylesheets="@../estilo/estiloInicioSesion.css">
          <children>
-            <TextField fx:id="correoElectronico" layoutX="85.0" layoutY="54.0" prefHeight="44.0" prefWidth="190.0" promptText="Correo Electrónico*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
-            <TextField fx:id="contrasenia" layoutX="85.0" layoutY="143.0" prefHeight="44.0" prefWidth="190.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
+            <TextField fx:id="correoElectronico" layoutX="54.0" layoutY="57.0" prefHeight="38.0" prefWidth="252.0" promptText="Correo Electrónico*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
+            <TextField fx:id="contrasenia" layoutX="54.0" layoutY="127.0" prefHeight="38.0" prefWidth="252.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
             <Button layoutX="80.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnInicioSesion" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Iniciar Sesion" />
          </children>
       </Pane>
@@ -23,8 +22,8 @@
             <Image url="@../imgRef/LogoWheels.jpeg" />
          </image>
       </ImageView>
-      <Line endX="179.0" layoutX="180.0" layoutY="286.0" startX="-181.0" stroke="#1b2638" strokeWidth="4.0" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnSalida" prefHeight="25.0" prefWidth="35.0" styleClass="botonSalida" stylesheets="@../estilo/estiloApp.css">
+      <Line endX="179.0" layoutX="180.0" layoutY="286.0" startX="-181.0" stroke="#1b2638" strokeWidth="2.0" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnSalida" prefHeight="25.0" prefWidth="35.0" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css">
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
