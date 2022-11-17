@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CRutasConductor" />
+<AnchorPane prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CPasajero.CInicioPasajero">
+   <children>
+      <Label alignment="TOP_RIGHT" layoutX="131.0" layoutY="59.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloConductorPasajero.css" text="RUTAS">
+         <font>
+            <Font name="Colonna MT" size="11.0" />
+         </font>
+      </Label>
+      <Line endX="270.0" layoutX="105.0" layoutY="58.0" startX="-95.0" stroke="WHITE" />
+      <Line endX="270.0" layoutX="105.0" layoutY="117.0" startX="-95.0" stroke="WHITE" />
+      <Button mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.bottomAnchor="558.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoSalida.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="125.0" layoutY="16.0" mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoInicio.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="218.0" layoutY="16.0" mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoRuta.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="320.0" layoutY="16.0" mnemonicParsing="false" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="16.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgRef/Iconos/iconoVolver.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

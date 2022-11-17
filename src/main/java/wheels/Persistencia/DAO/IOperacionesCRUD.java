@@ -8,7 +8,8 @@ public interface IOperacionesCRUD <Plantilla>{
     public void eliminar(Object llave);
     public void actualizar(Plantilla ref);
 
-    public Plantilla obtenerConsulta(Object llave);
+    public String obtenerConsulta(Object llave);
+
     public List<Plantilla> obtenerConsultas();
 
 }

@@ -3,7 +3,6 @@ package wheels.Persistencia.DAO;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import wheels.Persistencia.Conexion.Conexion;
-import wheels.Persistencia.DTO.ConductorDTO;
 import wheels.Persistencia.DTO.RutaDTO;
 
 import java.util.List;
@@ -37,7 +36,7 @@ public class RutaDAO implements  IOperacionesCRUD<RutaDTO>{
     }
 
     @Override
-    public RutaDTO obtenerConsulta(Object llave) {
+    public String obtenerConsulta(Object llave) {
         return null;
     }
 
