@@ -13,7 +13,7 @@
       <Pane layoutX="-1.0" layoutY="286.0" prefHeight="317.0" prefWidth="360.0" styleClass="fondo-blanco" stylesheets="@../estilo/estiloInicioSesion.css">
          <children>
             <TextField fx:id="correoElectronico" layoutX="54.0" layoutY="57.0" prefHeight="38.0" prefWidth="252.0" promptText="Correo Electrónico*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
-            <TextField fx:id="contrasenia" layoutX="54.0" layoutY="127.0" prefHeight="38.0" prefWidth="252.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
+            <TextField fx:id="contrasena" layoutX="54.0" layoutY="127.0" prefHeight="38.0" prefWidth="252.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
             <Button layoutX="80.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnInicioSesion" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Iniciar Sesion" />
          </children>
       </Pane>

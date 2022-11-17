@@ -30,7 +30,7 @@
       <TextField fx:id="numTelefono" layoutX="66.0" layoutY="407.0" prefHeight="40.0" prefWidth="230.0" promptText="Teléfono" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
       <TextField fx:id="codigoUniversidad" layoutX="65.0" layoutY="463.0" prefHeight="40.0" prefWidth="230.0" promptText="Código Universidad" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
       <Button layoutX="81.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="40.0" prefWidth="130.0" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Registrarse" />
-      <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonSalida" stylesheets="@../estilo/estiloApp.css">
+      <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css">
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>

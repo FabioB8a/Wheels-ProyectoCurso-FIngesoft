@@ -8,6 +8,8 @@ import org.bson.Document;
 
 import java.util.List;
 
+import static com.mongodb.client.model.Filters.eq;
+
 public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
     private static final Conexion conexion = Conexion.obtenerConexion();
 
@@ -43,12 +45,22 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
     }
 
     @Override
-    public ConductorDTO obtenerConsulta(Object llave) {
+    public String obtenerConsulta(Object llave) {
         return null;
     }
 
     @Override
     public List<ConductorDTO> obtenerConsultas() {
         return null;
+    }
+
+    public String obtenerConsultaExistencia(Object llave) {
+
+        return String.valueOf(conductores.find(eq("nombreUsuario", llave)).first());
+    }
+
+    public String obtenerConsulContrasena(Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("contraseña");
     }
 }
