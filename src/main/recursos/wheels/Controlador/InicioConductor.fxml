@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="382.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CInicioConductor">
+<ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="382.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CIncioConductor">
    <content>
       <AnchorPane prefHeight="820.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css">
          <children>

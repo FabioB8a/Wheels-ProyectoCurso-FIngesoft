@@ -53,9 +53,29 @@ public class PasajeroDAO implements IOperacionesCRUD<PasajeroDTO> {
         return String.valueOf(pasajeros.find(eq("nombreUsuario", llave)).first());
     }
 
-    public String obtenerConsulContrasena(Object llave) {
+    public String obtenerConsultaNombre(Object llave) {
+
+        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("nombreCompleto");
+    }
+    public String obtenerConsultaCorreo(Object llave) {
+
+        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("nombreUsuario");
+    }
+    public String obtenerConsultaContrasena(Object llave) {
 
         return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("contraseña");
+    }
+    public String obtenerConsultaUniversidad(Object llave) {
+
+        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("universidad");
+    }
+    public String obtenerConsultaTelefono(Object llave) {
+
+        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("telefono");
+    }
+    public String obtenerConsultaCodigo(Object llave) {
+
+        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("codigo");
     }
 
 }

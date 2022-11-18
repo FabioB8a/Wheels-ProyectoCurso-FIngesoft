@@ -2,7 +2,7 @@ package wheels.Persistencia.DTO;
 
 import java.util.Date;
 
-public class ConductorDTO extends UsuarioDTO{
+public class ConductorDTO extends UsuarioDTO {
 
     private String cedulaConductor;
     private String marcaAuto;
@@ -10,6 +10,7 @@ public class ConductorDTO extends UsuarioDTO{
     private String placaAuto;
     private String polizaAuto;
     private String chasisAuto;
+
 
     public ConductorDTO(String nombreCompleto, String nombreUsuario, String contraseña, String universidad, String telefono, String cedulaConductor, String marcaAuto, String modeloAuto, String placaAuto, String polizaAuto, String chasisAuto) {
         super(nombreCompleto, nombreUsuario, contraseña, universidad, telefono);
@@ -47,6 +48,7 @@ public class ConductorDTO extends UsuarioDTO{
     }
 
 
+
     public void setCedulaConductor(String cedulaConductor) {
         this.cedulaConductor = cedulaConductor;
     }
@@ -70,5 +72,6 @@ public class ConductorDTO extends UsuarioDTO{
     public void setChasisAuto(String chasisAuto) {
         this.chasisAuto = chasisAuto;
     }
+
 
 }

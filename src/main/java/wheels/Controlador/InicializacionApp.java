@@ -27,7 +27,7 @@ public class InicializacionApp extends Application {
 
         PasajeroDAO pasajero = new PasajeroDAO();
         //pasajero.crear(new PasajeroDTO("Sebastian","Sebatangca@gmail.com","123","UDCA", "3192152768","KJ5fs56f46"));
-        String dato = pasajero.obtenerConsulContrasena("Fabio8A");
+        String dato = pasajero.obtenerConsultaContrasena("Fabio8A");
         System.out.println("la clave es: " + dato);
     }
 }

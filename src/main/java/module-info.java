@@ -13,4 +13,5 @@ module wheels.wheels {
     exports wheels.Controlador.CConductor;
     opens wheels.Controlador.CInicio to javafx.fxml;
     opens wheels.Controlador.CPasajero to javafx.fxml;
+    opens wheels.Controlador.CConductor to javafx.fxml;
 }

@@ -1,9 +1,8 @@
-package wheels.Controlador.CPasajero;
+package wheels.Controlador.CConductor;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-
 import wheels.Controlador.CEscenarios;
 import wheels.Modelo.CampoTexto;
 import wheels.Persistencia.DAO.IOperacionesCRUD;
@@ -12,7 +11,7 @@ import wheels.Persistencia.DTO.PasajeroDTO;
 
 import java.io.IOException;
 
-public class CRegistroPasajero {
+public class CIncioConductor {
 
     @FXML
     private TextField codigoUniversidad;
