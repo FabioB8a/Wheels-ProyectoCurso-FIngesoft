@@ -23,24 +23,15 @@ public class CEscenarios {
         escenario.show();
     }
 
-    public static void cambiarVistaInfo(ActionEvent event, String nombreVista, String dato) throws IOException {
-        FXMLLoader loader = new FXMLLoader(CEscenarios.class.getResource(nombreVista));
-        Parent raiz = loader.load();
-        PruebaInformacion pb = loader.getController();
-        pb.setTextoPrueba(dato);
-        Stage escenario = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene escena = new Scene(raiz);
-        escenario.getIcons().add(new Image(InicializacionApp.class.getResourceAsStream("/wheels/imgRef/Iconos/iconoLogo.jpeg")));
-        escenario.setScene(escena);
-        escenario.show();
-    }
 
-    public static void cambiarVistaInfo2(ActionEvent event,String nombreClase, String nombreVista, String dato) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+    public static void cambiarVistaInfo(ActionEvent event,String ubicacionClase, String nombreVista, String dato) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         FXMLLoader loader = new FXMLLoader(CEscenarios.class.getResource(nombreVista));
         Parent raiz = loader.load();
-        ICInformacion pb = (ICInformacion) Class.forName(nombreClase).newInstance();
+
+        ICInformacion pb = (ICInformacion) Class.forName(ubicacionClase).newInstance();
         pb = loader.getController();
         pb.inicializarInformacion(dato);
+
         Stage escenario = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene escena = new Scene(raiz);
         escenario.getIcons().add(new Image(InicializacionApp.class.getResourceAsStream("/wheels/imgRef/Iconos/iconoLogo.jpeg")));
