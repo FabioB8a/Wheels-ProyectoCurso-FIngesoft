@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloInicioSesion.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CInicio.CInicioSesion">
    <children>
       <Pane layoutX="-1.0" layoutY="286.0" prefHeight="317.0" prefWidth="360.0" styleClass="fondo-blanco" stylesheets="@../estilo/estiloInicioSesion.css">
          <children>
-            <TextField fx:id="correoElectronico" layoutX="85.0" layoutY="54.0" prefHeight="44.0" prefWidth="190.0" promptText="Correo Electrónico*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
-            <TextField fx:id="contrasenia" layoutX="85.0" layoutY="143.0" prefHeight="44.0" prefWidth="190.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
+            <TextField fx:id="correoElectronico" layoutX="85.0" layoutY="75.0" prefHeight="44.0" prefWidth="190.0" promptText="Correo Electrónico*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
             <Button layoutX="80.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnInicioSesion" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Iniciar Sesion" />
+            <RadioButton layoutX="85.0" layoutY="33.0" mnemonicParsing="false" styleClass="btn-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" text="Pasajero">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="198.0" layoutY="33.0" mnemonicParsing="false" styleClass="btn-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" text="Conductor" toggleGroup="$TGroup" />
+            <PasswordField fx:id="contrasenia" layoutX="85.0" layoutY="150.0" prefHeight="44.0" prefWidth="190.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
          </children>
       </Pane>
       <ImageView fitHeight="242.0" fitWidth="274.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
