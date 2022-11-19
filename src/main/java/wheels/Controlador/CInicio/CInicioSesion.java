@@ -2,6 +2,7 @@ package wheels.Controlador.CInicio;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import wheels.Controlador.CEscenarios;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 public class CInicioSesion {
     @FXML
-    private TextField contrasenia;
+    private PasswordField contrasenia;
 
     @FXML
     private TextField correoElectronico;

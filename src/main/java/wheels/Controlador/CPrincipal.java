@@ -9,8 +9,8 @@ public class CPrincipal {
 
     @FXML
     void btnIniciarSesion(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.PruebaInformacion","PruebaInformacion.fxml","Se logró");
-        //CEscenarios.cambiarVista(event,"InicioSesion.fxml");
+        //CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.PruebaInformacion","PruebaInformacion.fxml","Se logró");
+        CEscenarios.cambiarVista(event,"InicioSesion.fxml");
     }
 
     @FXML

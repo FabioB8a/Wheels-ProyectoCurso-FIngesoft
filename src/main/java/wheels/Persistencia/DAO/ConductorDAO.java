@@ -48,6 +48,11 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         return null;
     }
 
+
+    public String obtenerCorreo(Object llave) {
+        return null;
+    }
+
     @Override
     public List<ConductorDTO> obtenerConsultas() {
         return null;
