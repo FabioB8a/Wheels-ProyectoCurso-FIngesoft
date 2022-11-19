@@ -1,20 +1,22 @@
 package wheels.Persistencia.DTO;
 
-public class RutaDTO {
+public abstract class RutaDTO {
     private String idRuta;
     private String puntoOrigen;
     private String puntoLlegada;
     private Integer cantPasajeros;
     private String horaLlegada;
     private String horaSalida;
+    private String zona;
 
-    public RutaDTO(String idRuta, String puntoOrigen, String puntoLlegada, Integer cantPasajeros, String horaLlegada, String horaSalida) {
+    public RutaDTO(String idRuta, String puntoOrigen, String puntoLlegada, Integer cantPasajeros, String horaLlegada, String horaSalida,String zona) {
         this.idRuta = idRuta;
         this.puntoOrigen = puntoOrigen;
         this.puntoLlegada = puntoLlegada;
         this.cantPasajeros = cantPasajeros;
         this.horaLlegada = horaLlegada;
         this.horaSalida = horaSalida;
+        this.zona = zona;
     }
 
     public String getIdRuta() {
@@ -63,5 +65,13 @@ public class RutaDTO {
 
     public void setHoraSalida(String horaSalida) {
         this.horaSalida = horaSalida;
+    }
+
+    public String getZona() {
+        return zona;
+    }
+
+    public void setZona(String zona) {
+        this.zona = zona;
     }
 }

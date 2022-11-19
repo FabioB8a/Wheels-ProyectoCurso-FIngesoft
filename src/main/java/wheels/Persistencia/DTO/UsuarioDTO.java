@@ -1,6 +1,6 @@
 package wheels.Persistencia.DTO;
 
-public class UsuarioDTO {
+public abstract class UsuarioDTO {
     private String nombreCompleto;
     private String nombreUsuario;
     private String contraseña;
