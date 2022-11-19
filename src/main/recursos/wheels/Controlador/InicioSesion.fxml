@@ -17,12 +17,12 @@
          <children>
             <TextField fx:id="correoElectronico" layoutX="85.0" layoutY="75.0" prefHeight="44.0" prefWidth="190.0" promptText="Correo Electrónico*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
             <Button layoutX="80.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnInicioSesion" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Iniciar Sesion" />
-            <RadioButton layoutX="85.0" layoutY="33.0" mnemonicParsing="false" styleClass="btn-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" text="Pasajero">
+            <RadioButton fx:id="bPasajero" layoutX="85.0" layoutY="33.0" mnemonicParsing="false" styleClass="btn-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" text="Pasajero">
                <toggleGroup>
                   <ToggleGroup fx:id="TGroup" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="198.0" layoutY="33.0" mnemonicParsing="false" styleClass="btn-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" text="Conductor" toggleGroup="$TGroup" />
+            <RadioButton fx:id="bConductor" layoutX="198.0" layoutY="33.0" mnemonicParsing="false" styleClass="btn-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" text="Conductor" toggleGroup="$TGroup" />
             <PasswordField fx:id="contrasenia" layoutX="85.0" layoutY="150.0" prefHeight="44.0" prefWidth="190.0" promptText="Contraseña*" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloInicioSesion.css" />
          </children>
       </Pane>
