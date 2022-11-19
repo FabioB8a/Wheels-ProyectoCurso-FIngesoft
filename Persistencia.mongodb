@@ -36,7 +36,7 @@ db.createCollection("Conductor",{
   validator:{
     $jsonSchema: {
       bsonType: "object",
-      required:["nombreCompleto","nombreUsuario","contraseña","universidad","telefono","cedulaConductor","marcaAuto","modeloAuto","placaAuto","polizaAuto","chasisAuto","fechaExpAuto"],
+      required:["nombreCompleto","nombreUsuario","contraseña","universidad","telefono","cedulaConductor","marcaAuto","modeloAuto","placaAuto","polizaAuto","chasisAuto"],
       properties:{
         nombreCompleto: { bsonType: "string", description: "Debe ser string" },
         nombreUsuario: { bsonType: "string", description: "Debe ser string Único" },
@@ -48,8 +48,7 @@ db.createCollection("Conductor",{
         modeloAuto: { bsonType: "string", description: "Debe ser string" },
         placaAuto: { bsonType: "string", description: "Debe ser string" },
         polizaAuto: { bsonType: "string", description: "Debe ser string" },
-        chasisAuto: { bsonType: "string", description: "Debe ser string" },
-        fechaExpAuto: { bsonType: "date", description: "Debe ser fecha" }
+        chasisAuto: { bsonType: "string", description: "Debe ser string" }
       }
     }
   }
@@ -57,6 +56,7 @@ db.createCollection("Conductor",{
 );
 
 const baseDatos = 'WheelsBD';
+
 
 // Accede a la base de datos, si no está creada, la crea
 use(baseDatos);
@@ -67,14 +67,15 @@ db.createCollection("Ruta",{
   validator:{
     $jsonSchema: {
       bsonType: "object",
-      required:["idRuta","puntoOrigen","puntoLlegada","cantPasajeros","horaLlegada","horaSalida"],
+      required:["nombreUsuario","nombreConductor","idRuta","puntoOrigen","puntoLlegada","cantPasajeros","horaLlegada","horaSalida","zona"],
       properties:{
         idRuta: { bsonType: "string", description: "Debe ser string Único" },
         puntoOrigen: { bsonType: "string", description: "Debe ser string" },
         puntoLlegada: { bsonType: "string", description: "Debe ser string" },
         cantPasajeros: { bsonType: "int", description: "Debe ser entero" },
         horaLlegada: { bsonType: "string", description: "Debe ser string" },
-        horaSalida: { bsonType: "string", description: "Debe ser string" }
+        horaSalida: { bsonType: "string", description: "Debe ser string" },
+        zona: { bsonType: "string", description: "Debe ser string" }
       }
     }
   }
