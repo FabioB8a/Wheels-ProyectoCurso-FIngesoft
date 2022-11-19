@@ -67,9 +67,11 @@ db.createCollection("Ruta",{
   validator:{
     $jsonSchema: {
       bsonType: "object",
-      required:["nombreUsuario","nombreConductor","idRuta","puntoOrigen","puntoLlegada","cantPasajeros","horaLlegada","horaSalida","zona"],
+      required:["idRuta","nombreConductor","Usuarios","puntoOrigen","puntoLlegada","cantPasajeros","horaLlegada","horaSalida","zona"],
       properties:{
         idRuta: { bsonType: "string", description: "Debe ser string Único" },
+        nombreConductor:{ bsonType: "string", description: "Debe ser string" },
+        Usuarios:{ bsonType: ["array"], items:{bsonType: "string", description: "Debe ser string"} },
         puntoOrigen: { bsonType: "string", description: "Debe ser string" },
         puntoLlegada: { bsonType: "string", description: "Debe ser string" },
         cantPasajeros: { bsonType: "int", description: "Debe ser entero" },
@@ -81,3 +83,5 @@ db.createCollection("Ruta",{
   }
 }
 );
+
+
