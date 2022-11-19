@@ -31,3 +31,10 @@
     -fx-font-size: 40px;
     -fx-text-fill: #fdfefe;
 }
+
+.label-Advertencia{
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-font-size: 12px;
+    -fx-text-fill: #fdfefe;
+    -fx-text-alignment: center;
+}
