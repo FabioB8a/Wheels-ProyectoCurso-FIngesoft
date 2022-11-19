@@ -5,31 +5,18 @@ import wheels.Persistencia.DTO.ConductorDTO;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
 import org.bson.Document;
+import wheels.Persistencia.Mapper.MapperImpl;
 
 import java.util.List;
 
 public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
     private static final Conexion conexion = Conexion.obtenerConexion();
-
+    private static final MapperImpl mapper = MapperImpl.obtenerMapperImpl();
     private static MongoCollection<Document> conductores = (conexion.getDb()).getCollection("Conductor");
 
     @Override
     public void crear(ConductorDTO ref) {
-
-        Document documento = new Document();
-        documento.append("nombreCompleto", ref.getNombreCompleto());
-        documento.append("nombreUsuario", ref.getNombreUsuario());
-        documento.append("contraseña", ref.getContraseña());
-        documento.append("universidad", ref.getUniversidad());
-        documento.append("telefono", ref.getTelefono());
-        documento.append("cedulaConductor", ref.getCedulaConductor());
-        documento.append("marcaAuto", ref.getMarcaAuto());
-        documento.append("modeloAuto", ref.getModeloAuto());
-        documento.append("placaAuto", ref.getPlacaAuto());
-        documento.append("polizaAuto", ref.getPolizaAuto());
-        documento.append("chasisAuto", ref.getChasisAuto());
-        documento.append("fechaExpAuto", ref.getFechaExpAuto());
-
+        Document documento = mapper.DTOaDocumentoConductor(ref);
         conductores.insertOne(documento);
     }
 
@@ -39,19 +26,12 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
     }
 
     @Override
-    public void actualizar(ConductorDTO ref) {
+    public void actualizar(Object llave) {
 
     }
 
     @Override
-    public ConductorDTO obtenerConsulta(Object llave) {
-        return null;
-    }
-
-
-    public String obtenerCorreo(Object llave) {
-        return null;
-    }
+    public String obtenerConsulta(Object llave) {return null;}
 
     @Override
     public List<ConductorDTO> obtenerConsultas() {

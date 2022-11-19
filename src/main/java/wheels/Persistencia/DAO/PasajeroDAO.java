@@ -5,6 +5,7 @@ import wheels.Persistencia.DTO.PasajeroDTO;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
 import org.bson.Document;
+import wheels.Persistencia.Mapper.MapperImpl;
 
 import java.util.List;
 
@@ -13,19 +14,14 @@ import static com.mongodb.client.model.Filters.eq;
 public class PasajeroDAO implements IOperacionesCRUD<PasajeroDTO> {
 
     private static final Conexion conexion = Conexion.obtenerConexion();
+    private static final MapperImpl mapper = MapperImpl.obtenerMapperImpl();
     private static MongoCollection<Document> pasajeros = (conexion.getDb()).getCollection("Pasajero");
+
+
 
     @Override
     public void crear(PasajeroDTO ref) {
-
-        Document documento = new Document();
-        documento.append("nombreCompleto", ref.getNombreCompleto());
-        documento.append("nombreUsuario", ref.getNombreUsuario());
-        documento.append("contraseña", ref.getContraseña());
-        documento.append("universidad", ref.getUniversidad());
-        documento.append("telefono", ref.getTelefono());
-        documento.append("codigo", ref.getCodigo());
-
+        Document documento = mapper.DTOaDocumentoPasajero(ref);
         pasajeros.insertOne(documento);
     }
 
@@ -35,13 +31,13 @@ public class PasajeroDAO implements IOperacionesCRUD<PasajeroDTO> {
     }
 
     @Override
-    public void actualizar(PasajeroDTO ref) {
+    public void actualizar(Object llave) {
 
     }
 
     @Override
-    public PasajeroDTO obtenerConsulta(Object llave) {
-        return null;
+    public String obtenerConsulta(Object llave) {
+        return (String) pasajeros.find(eq("nombreUsuario",llave)).first().get("nombreCompleto");
     }
 
     @Override
