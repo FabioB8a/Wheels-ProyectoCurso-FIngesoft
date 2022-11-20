@@ -66,4 +66,16 @@ public class RutaDAO implements  IOperacionesCRUD<RutaConductorDTO>{
         ArrayList<RutaPasajerosDTO> rutasRetorno = mapper.DRConductorDTO(rutasRef);
         return rutasRetorno;
     }
+
+    public void aniadirPasajero(String idRuta, String nombrePasajero)
+    {
+        BasicDBObject consultaBusqueda = new BasicDBObject();
+        consultaBusqueda.append("idRuta", idRuta);
+
+        BasicDBObject consultaActualizacion = new BasicDBObject();
+        consultaActualizacion.append("$push",
+                new BasicDBObject().append("Usuarios", nombrePasajero));
+
+        rutas.findOneAndUpdate(consultaBusqueda,consultaActualizacion);
+    }
 }
