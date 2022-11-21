@@ -38,7 +38,7 @@ public class CInicioPasajero implements ICInformacion {
     }
     @FXML
     void btnRutas(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CPasajero.CRutasPasajero","RutasPasajero.fxml",correo.getText());
+        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CPasajero.CAniadirRutasPasajero","RutasAniadirPasajero.fxml",correo.getText());
 
     }
     @FXML
