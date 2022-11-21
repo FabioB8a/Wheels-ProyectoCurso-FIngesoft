@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import wheels.Persistencia.DAO.ConductorDAO;
 import wheels.Persistencia.DAO.PasajeroDAO;
 import wheels.Persistencia.DTO.PasajeroDTO;
 
@@ -26,8 +27,11 @@ public class InicializacionApp extends Application {
         launch();
 
         PasajeroDAO pasajero = new PasajeroDAO();
-        //pasajero.crear(new PasajeroDTO("Sebastian","Sebatangca@gmail.com","123","UDCA", "3192152768","KJ5fs56f46"));
-        String dato = pasajero.obtenerConsultaContrasena("Fabio8A");
+        ConductorDAO conductor = new ConductorDAO();
+        //conductor.crear(new ConductorDAO("Fabio Luis","Fabs8a@gmail.com","123","Nacional", "3212152768","KJ5fs56f46", "dasd", "fsdfdf" , "sdfsdfsdf", "sdfdf"));
+
+
+        String dato = pasajero.obtenerConsultaExistencia("Fabio8A");
         System.out.println("la clave es: " + dato);
     }
 }

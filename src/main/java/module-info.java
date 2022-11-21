@@ -4,6 +4,7 @@ module wheels.wheels {
     requires org.mongodb.driver.sync.client;
     requires org.mongodb.driver.core;
     requires org.mongodb.bson;
+    requires java.management;
 
 
     opens wheels.Controlador to javafx.fxml;

@@ -42,6 +42,7 @@
                         </ImageView>
                     </graphic>
                 </Button>
+            <Label fx:id="lblAdvertencia" layoutX="184.0" layoutY="897.0" textFill="WHITE" />
             </children></AnchorPane>
     </content>
 </ScrollPane>

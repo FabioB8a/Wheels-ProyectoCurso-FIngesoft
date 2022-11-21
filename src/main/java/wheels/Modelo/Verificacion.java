@@ -5,7 +5,7 @@ import wheels.Persistencia.DAO.*;
 
 import java.util.Objects;
 
-public class CampoTexto {
+public class Verificacion {
 
     public String verificarInicio(String correo, String contrasena) { // verifican que los text field no esten en null y redirige a metodo de consultas
 
@@ -44,5 +44,4 @@ public class CampoTexto {
         }
         return false;
     }
-
 }
