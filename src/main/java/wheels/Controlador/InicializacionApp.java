@@ -25,13 +25,5 @@ public class InicializacionApp extends Application {
 
     public static void main(String[] args) {
         launch();
-
-        PasajeroDAO pasajero = new PasajeroDAO();
-        ConductorDAO conductor = new ConductorDAO();
-        //conductor.crear(new ConductorDAO("Fabio Luis","Fabs8a@gmail.com","123","Nacional", "3212152768","KJ5fs56f46", "dasd", "fsdfdf" , "sdfsdfsdf", "sdfdf"));
-
-
-        String dato = pasajero.obtenerConsultaExistencia("Fabio8A");
-        System.out.println("la clave es: " + dato);
     }
 }

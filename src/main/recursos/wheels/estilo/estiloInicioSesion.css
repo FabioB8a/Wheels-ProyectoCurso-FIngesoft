@@ -5,16 +5,39 @@
 .fondo-azul{
     -fx-background-color: #6597b2;
 }
-
 .fondo-blanco{
     -fx-background-color: #fdfefe;
 }
-
-.txtField-Generalizado {
+.txtField-Generalizado{
     -fx-font-family: 'Questrial', sans-serif;
     -fx-background-color: #fafbfc;
     -fx-border-style: hidden hidden solid hidden;
     -fx-border-color: #1b2638;
-    -fx-border-width: 1px;
+    -fx-border-width: 4px;
     -fx-text-fill: #1b2638;
+}
+
+.btn-Generalizado{
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-text-fill: #1b2638;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #6597b2;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 4px;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: #1b2638;
+    -fx-background-insets: 0;
+}
+
+.lblAdvertencia {
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-text-fill: #1b2638;
+    -fx-font-size: 10px;
 }
