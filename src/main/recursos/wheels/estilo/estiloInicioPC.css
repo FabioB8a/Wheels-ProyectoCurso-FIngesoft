@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Color de fondo */
+.fondo-azul{
+    -fx-background-color: #6597b2;
+}
+.fondo-blanco{
+    -fx-background-color: #f8f8f8;
+    -fx-background-radius: 30;
+    -fx-border-color: #6597b2;
+    -fx-border-width: 1px;
+}
+
+.label-Titulo{
+    -fx-font-family: 'Bebas Neue', cursive;
+    -fx-font-size: 40px;
+    -fx-text-fill: #6597b2;
+    -fx-background-color: #fdfefe;
+}
+
+.label-Comentario{
+    -fx-font-family: 'Bebas Neue', cursive;
+    -fx-font-size: 40px;
+    -fx-text-fill: #fdfefe;
+}
+
+.label-Etiqueta{
+    -fx-font-family: 'Bebas Neue', cursive;
+    -fx-font-size: 15px;
+    -fx-text-fill: #1b2638;
+}
+
+.label-PEtiqueta{
+    -fx-font-family: 'Bebas Neue', cursive;
+    -fx-font-size: 10px;
+    -fx-text-fill: #1b2638;
+}
+
+.label-Informacion{
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-background-color: #6597b2;
+    -fx-border-width: 5px;
+    -fx-text-fill: #fdfefe;
+}
