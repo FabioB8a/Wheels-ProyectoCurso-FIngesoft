@@ -19,6 +19,7 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
     public void crear(ConductorDTO ref) {
 
         Document documento = new Document();
+
         documento.append("nombreCompleto", ref.getNombreCompleto());
         documento.append("nombreUsuario", ref.getNombreUsuario());
         documento.append("contraseña", ref.getContraseña());
@@ -59,8 +60,54 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         return String.valueOf(conductores.find(eq("nombreUsuario", llave)).first());
     }
 
-    public String obtenerConsulContrasena(Object llave) {
+    public String obtenerCorreo(Object llave) {
+        try{
+            return (String) conductores.find(eq("nombreUsuario",llave)).first().get("nombreUsuario");
+        }catch (RuntimeException e){
+            return null;
+        }
+    }
+
+    public String obtenerConsultaContrasena(Object llave) {
 
         return (String) conductores.find(eq("nombreUsuario", llave)).first().get("contraseña");
     }
+
+    public String obtenerConsultaNombre (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("nombreCompleto");
+    }
+    public String obtenerConsultaUniversidad (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("universidad");
+    }
+    public String obtenerConsultaTelefono (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("telefono");
+    }
+    public String obtenerConsultaCedula (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("cedulaConductor");
+    }
+    public String obtenerConsultaMarca (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("marcaAuto");
+    }
+    public String obtenerConsultaModelo (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("modeloAuto");
+    }
+    public String obtenerConsultaPlaca (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("placaAuto");
+    }
+    public String obtenerConsultaPoliza (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("polizaAuto");
+    }
+    public String obtenerConsultaChasis (Object llave) {
+
+        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("chasisAuto");
+    }
+
 }

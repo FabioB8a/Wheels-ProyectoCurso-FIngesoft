@@ -9,6 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloConductorPasajero.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CPasajero.CRegistroPasajero">
    <children>
       <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="19.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="54.0">
@@ -29,7 +30,7 @@
       <TextField fx:id="universidad" layoutX="65.0" layoutY="353.0" prefHeight="40.0" prefWidth="230.0" promptText="Universidad" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
       <TextField fx:id="numTelefono" layoutX="66.0" layoutY="407.0" prefHeight="40.0" prefWidth="230.0" promptText="Teléfono" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
       <TextField fx:id="codigoUniversidad" layoutX="65.0" layoutY="463.0" prefHeight="40.0" prefWidth="230.0" promptText="Código Universidad" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <Button layoutX="81.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="40.0" prefWidth="130.0" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Registrarse" />
+      <Button layoutX="81.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnRegistro" prefHeight="40.0" prefWidth="130.0" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Registrarse" />
       <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css">
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
@@ -39,5 +40,6 @@
             </ImageView>
          </graphic>
       </Button>
+      <Label fx:id="lblAdvertencia" layoutX="177.0" layoutY="511.0" textFill="WHITE" />
    </children>
 </AnchorPane>
