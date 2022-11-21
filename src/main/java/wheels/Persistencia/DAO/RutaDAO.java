@@ -94,6 +94,25 @@ public class RutaDAO implements  IOperacionesCRUD<RutaConductorDTO>{
 
         rutas.findOneAndUpdate(consultaBusqueda,consultaActualizacion);
     }
+
+    public String obteneridRuta(Object llave){
+        try{
+            return (String) rutas.find(eq("idRuta",llave)).first().get("idRuta");
+        }catch (RuntimeException e){
+            return null;
+        }
+    }
+
+    public String obtenerRutaPasajero(Object nombrePasajero, Object idRuta){
+        try{
+            BasicDBObject consultaBusqueda = new BasicDBObject();
+            consultaBusqueda.append("Usuarios", nombrePasajero);
+            consultaBusqueda.append("idRuta", idRuta);
+            return (String) rutas.find(consultaBusqueda).first().get("idRuta");
+        }catch (RuntimeException e){
+            return null;
+        }
+    }
     public String obtenerConsultaNombreUsuario (Object llave) {
 
         return (String) rutas.find(eq("idRuta", llave)).first().get("Usuarios");

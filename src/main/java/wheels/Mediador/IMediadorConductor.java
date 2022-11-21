@@ -6,14 +6,14 @@ public interface IMediadorConductor {
 
     boolean evaluarExistencia(String correoInstitucional);
     boolean registrar(ConductorDTO pasDTO);
-    Object evaluarNombre(Object llave);
-    Object evaluarContrasena(Object llave);
-    Object evaluaruniversidad(Object llave);
-    Object evaluartelefono(Object llave);
-    Object evaluarCedula(Object llave);
-    Object evaluarMarca(Object llave);
-    Object evaluarModelo(Object llave);
-    Object evaluarPlaca(Object llave);
-    Object evaluarPoliza(Object llave);
-    Object evaluarChasis(Object llave);
+    String evaluarNombre(Object llave);
+    String evaluarContrasena(Object llave);
+    String evaluaruniversidad(Object llave);
+    String evaluartelefono(Object llave);
+    String evaluarCedula(Object llave);
+    String evaluarMarca(Object llave);
+    String evaluarModelo(Object llave);
+    String evaluarPlaca(Object llave);
+    String evaluarPoliza(Object llave);
+    String evaluarChasis(Object llave);
 }

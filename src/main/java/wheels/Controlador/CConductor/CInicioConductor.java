@@ -64,7 +64,7 @@ public class CInicioConductor implements ICInformacion {
     }
     @FXML
     void btnRutas(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CConductor.CRutasConductor","RutasConductor.fxml",correoInstitucional.getText());
+        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CConductor.CAniadirRutasConductor","RutasAniadirConductor.fxml",correoInstitucional.getText());
     }
     @FXML
     void btnVolver(ActionEvent event) throws IOException {

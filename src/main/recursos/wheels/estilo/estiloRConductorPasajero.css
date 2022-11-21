@@ -9,8 +9,8 @@
 .fondo-azul{
     -fx-background-color: #6597b2;
 }
-/*
-.txtField-Generalizado{
+
+/*.txtField-Generalizado{
     -fx-font-family: 'Questrial', sans-serif;
     -fx-background-color: #6597b2;
     -fx-background-radius: 100;
@@ -32,14 +32,9 @@
     -fx-text-fill: #fdfefe;
 }
 
-.label-Cuerpo{
-    -fx-font-family: 'Bebas Neue', cursive;
-    -fx-font-size: 20px;
-    -fx-text-fill: #1b2638;
-}
-
-.label-Cuerpo-texto{
-    -fx-font-family: 'Bebas Neue', cursive;
-    -fx-font-size: 15px;
+.label-Advertencia{
+    -fx-font-family: 'Questrial', sans-serif;
+    -fx-font-size: 12px;
     -fx-text-fill: #fdfefe;
+    -fx-text-alignment: center;
 }
