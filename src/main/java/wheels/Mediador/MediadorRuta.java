@@ -96,4 +96,8 @@ public class MediadorRuta implements IMediadorRuta {
     {
         return rutaDAO.consultarRutasNoPasajero(nombrePasajero);
     }
+    public ArrayList<RutaConductorDTO> evaluarRutasPasajero(String nombrePasajero)
+    {
+        return rutaDAO.consultarRutasPasajero(nombrePasajero);
+    }
 }

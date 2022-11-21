@@ -51,8 +51,8 @@ public class CAniadirRutasPasajero implements ICInformacion {
     }
 
     @FXML
-    void btnRutasEscogidas(ActionEvent event) {
-
+    void btnRutasEscogidas(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CPasajero.CConsultarRutasPasajero","RutasConsultarPasajero.fxml",llave);
     }
 
     @FXML
@@ -79,7 +79,7 @@ public class CAniadirRutasPasajero implements ICInformacion {
     @Override
     public void inicializarInformacion(Object llave) {
         this.llave = (String) llave;
-        rutas = mediadorR.evaluarRutasNoPasajero(this.llave);
+        rutas = mediadorR.evaluarRutasPasajero(this.llave);
         for(RutaConductorDTO r: rutas)
         {
             FXMLLoader fxmlLoaderA = new FXMLLoader();
