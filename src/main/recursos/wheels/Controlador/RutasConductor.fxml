@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CRutasConductor">
    <children>
-      <Label alignment="TOP_RIGHT" layoutX="131.0" layoutY="59.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloConductorPasajero.css" text="RUTAS">
+      <Label alignment="TOP_RIGHT" layoutX="131.0" layoutY="59.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="RUTAS">
          <font>
             <Font name="Colonna MT" size="11.0" />
          </font>
@@ -54,13 +54,13 @@
             </ImageView>
          </graphic>
       </Button>
-      <TextField fx:id="idRuta" layoutX="76.0" layoutY="128.0" prefHeight="40.0" prefWidth="230.0" promptText="Id Ruta" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <TextField fx:id="puntoOrigen" layoutX="76.0" layoutY="184.0" prefHeight="40.0" prefWidth="230.0" promptText="Punto de origen" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <TextField fx:id="puntoLlegada" layoutX="78.0" layoutY="241.0" prefHeight="40.0" prefWidth="230.0" promptText="Punto de llegada" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <TextField fx:id="cantPasajeros" layoutX="78.0" layoutY="297.0" prefHeight="40.0" prefWidth="230.0" promptText="cantidad de pasajeros" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <TextField fx:id="horaLlegada" layoutX="77.0" layoutY="349.0" prefHeight="40.0" prefWidth="230.0" promptText="Hora de llegada" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <TextField fx:id="horaSalida" layoutX="77.0" layoutY="405.0" prefHeight="40.0" prefWidth="230.0" promptText="Hora de salida" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
-      <TextField fx:id="zona" layoutX="78.0" layoutY="456.0" prefHeight="40.0" prefWidth="230.0" promptText="Zona" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloConductorPasajero.css" />
+      <TextField fx:id="idRuta" layoutX="76.0" layoutY="128.0" prefHeight="40.0" prefWidth="230.0" promptText="Id Ruta" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+      <TextField fx:id="puntoOrigen" layoutX="76.0" layoutY="184.0" prefHeight="40.0" prefWidth="230.0" promptText="Punto de origen" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+      <TextField fx:id="puntoLlegada" layoutX="78.0" layoutY="241.0" prefHeight="40.0" prefWidth="230.0" promptText="Punto de llegada" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+      <TextField fx:id="cantPasajeros" layoutX="78.0" layoutY="297.0" prefHeight="40.0" prefWidth="230.0" promptText="cantidad de pasajeros" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+      <TextField fx:id="horaLlegada" layoutX="77.0" layoutY="349.0" prefHeight="40.0" prefWidth="230.0" promptText="Hora de llegada" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+      <TextField fx:id="horaSalida" layoutX="77.0" layoutY="405.0" prefHeight="40.0" prefWidth="230.0" promptText="Hora de salida" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+      <TextField fx:id="zona" layoutX="78.0" layoutY="456.0" prefHeight="40.0" prefWidth="230.0" promptText="Zona" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
       <Button layoutX="92.0" layoutY="536.0" mnemonicParsing="false" onAction="#btnCreacion" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Crear Ruta" />
       <Label fx:id="lblAdvertencia" layoutX="177.0" layoutY="509.0" textFill="WHITE" />
    </children>

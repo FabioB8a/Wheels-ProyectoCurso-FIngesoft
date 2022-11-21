@@ -11,11 +11,9 @@ import wheels.Controlador.CEscenarios;
 import wheels.Mediador.MediadorConductor;
 import wheels.Mediador.MediadorPasajero;
 import wheels.Mediador.VerificacionTexto;
-import wheels.Modelo.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class CInicioSesion implements Initializable {
@@ -55,7 +53,7 @@ public class CInicioSesion implements Initializable {
         // Primero, verificación de campos vacíos
         if (verificacionTexto.verificarTextoVacio(correoElectronico.getText(),contrasenia.getText()))
         {
-            lblAdvertencia.setText("Recuerda digitar ambos campos");
+            lblAdvertencia.setText("Recuerda digitar ambos campos.");
             return;
         }
         // En caso de que no se encuentren vacíos, verifica el botón que presionó el usuario
@@ -64,7 +62,6 @@ public class CInicioSesion implements Initializable {
         {
             if(!mediadorPasajero.evaluarRegistro(correoElectronico.getText(),contrasenia.getText()))
             {
-                System.out.println("Hola");
                 CEscenarios.cambiarVistaInfo(event,ruta+"CInicioPasajero","InicioPasajero.fxml",correoElectronico.getText());
                 return;
             }
@@ -74,7 +71,6 @@ public class CInicioSesion implements Initializable {
         {
             if(!mediadorConductor.evaluarRegistro(correoElectronico.getText(),contrasenia.getText()))
             {
-                System.out.println("Hola");
                 CEscenarios.cambiarVistaInfo(event,ruta+"CInicioConductor","InicioPasajero.fxml",correoElectronico.getText());
                 return;
             }

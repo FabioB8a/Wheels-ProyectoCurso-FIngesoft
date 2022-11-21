@@ -16,7 +16,7 @@
    <content>
       <AnchorPane prefHeight="600.0" prefWidth="381.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css">
          <children>
-            <Label alignment="TOP_RIGHT" layoutX="131.0" layoutY="59.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloConductorPasajero.css" text="RUTAS">
+            <Label alignment="TOP_RIGHT" layoutX="131.0" layoutY="59.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="RUTAS">
                <font>
                   <Font name="Colonna MT" size="11.0" />
                </font>
