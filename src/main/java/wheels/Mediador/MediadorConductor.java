@@ -47,52 +47,52 @@ public class MediadorConductor implements IMediadorConductor {
     }
 
     @Override
-    public Object evaluarNombre(Object llave) {
+    public String evaluarNombre(Object llave) {
         return conDAO.obtenerConsultaNombre(llave);
     }
 
     @Override
-    public Object evaluarContrasena(Object llave) {
+    public String evaluarContrasena(Object llave) {
         return conDAO.obtenerContrasena(llave);
     }
 
     @Override
-    public Object evaluaruniversidad(Object llave) {
+    public String evaluaruniversidad(Object llave) {
         return conDAO.obtenerConsultaUniversidad(llave);
     }
 
     @Override
-    public Object evaluartelefono(Object llave) {
+    public String evaluartelefono(Object llave) {
         return conDAO.obtenerConsultaTelefono(llave);
     }
 
     @Override
-    public Object evaluarCedula(Object llave) {
+    public String evaluarCedula(Object llave) {
         return conDAO.obtenerConsultaCedula(llave);
     }
 
     @Override
-    public Object evaluarMarca(Object llave) {
+    public String evaluarMarca(Object llave) {
         return conDAO.obtenerConsultaMarca(llave);
     }
 
     @Override
-    public Object evaluarModelo(Object llave) {
+    public String evaluarModelo(Object llave) {
         return conDAO.obtenerConsultaModelo(llave);
     }
 
     @Override
-    public Object evaluarPlaca(Object llave) {
+    public String evaluarPlaca(Object llave) {
         return conDAO.obtenerConsultaPlaca(llave);
     }
 
     @Override
-    public Object evaluarPoliza(Object llave) {
+    public String evaluarPoliza(Object llave) {
         return conDAO.obtenerConsultaPoliza(llave);
     }
 
     @Override
-    public Object evaluarChasis(Object llave) {
+    public String evaluarChasis(Object llave) {
         return conDAO.obtenerConsultaChasis(llave);
     }
 }

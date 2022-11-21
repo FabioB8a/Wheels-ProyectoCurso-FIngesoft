@@ -77,16 +77,22 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
     }
 
     public String obtenerConsultaNombre (Object llave) {
-
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("nombreCompleto");
+        try{
+            return (String) conductores.find(eq("nombreUsuario",llave)).first().get("nombreCompleto");
+        }catch (RuntimeException e){
+            return null;
+        }
     }
     public String obtenerConsultaUniversidad (Object llave) {
 
         return (String) conductores.find(eq("nombreUsuario", llave)).first().get("universidad");
     }
     public String obtenerConsultaTelefono (Object llave) {
-
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("telefono");
+        try{
+            return (String) conductores.find(eq("nombreUsuario",llave)).first().get("telefono");
+        }catch (RuntimeException e){
+            return null;
+        }
     }
     public String obtenerConsultaCedula (Object llave) {
 
@@ -101,8 +107,11 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         return (String) conductores.find(eq("nombreUsuario", llave)).first().get("modeloAuto");
     }
     public String obtenerConsultaPlaca (Object llave) {
-
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("placaAuto");
+        try{
+            return (String) conductores.find(eq("nombreUsuario",llave)).first().get("placaAuto");
+        }catch (RuntimeException e){
+            return null;
+        }
     }
     public String obtenerConsultaPoliza (Object llave) {
 
