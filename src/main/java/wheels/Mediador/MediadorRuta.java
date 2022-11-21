@@ -5,6 +5,7 @@ import wheels.Persistencia.DAO.RutaDAO;
 import wheels.Persistencia.DTO.PasajeroDTO;
 import wheels.Persistencia.DTO.RutaConductorDTO;
 import wheels.Persistencia.DTO.RutaDTO;
+import wheels.Persistencia.DTO.RutaPasajerosDTO;
 
 import java.util.ArrayList;
 
@@ -99,5 +100,10 @@ public class MediadorRuta implements IMediadorRuta {
     public ArrayList<RutaConductorDTO> evaluarRutasPasajero(String nombrePasajero)
     {
         return rutaDAO.consultarRutasPasajero(nombrePasajero);
+    }
+
+    public ArrayList<RutaPasajerosDTO> evaluarRutasConductor(String nombreConductor)
+    {
+        return rutaDAO.consultarRutasConductores(nombreConductor);
     }
 }

@@ -73,8 +73,8 @@ public class CAniadirRutasConductor implements ICInformacion {
     }
 
     @FXML
-    void btnRutasEscogidas(ActionEvent event) {
-
+    void btnRutasEscogidas(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CConductor.CConsultarRutasConductor","RutasConsultarConductor.fxml",llave);
     }
 
     @FXML
@@ -87,6 +87,7 @@ public class CAniadirRutasConductor implements ICInformacion {
     void btnVolver(ActionEvent event) throws IOException {
         CEscenarios.cambiarVista(event, "VistaPrincipal.fxml");
     }
+
     @Override
     public void inicializarInformacion(Object llave) {
         this.llave = (String) llave;

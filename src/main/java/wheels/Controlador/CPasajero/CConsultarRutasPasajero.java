@@ -50,7 +50,7 @@ public class CConsultarRutasPasajero implements ICInformacion {
     @Override
     public void inicializarInformacion(Object llave) {
         this.llave = (String) llave;
-        rutas = mediadorR.evaluarRutasNoPasajero(this.llave);
+        rutas = mediadorR.evaluarRutasPasajero(this.llave);
         for(RutaConductorDTO r: rutas)
         {
             FXMLLoader fxmlLoaderA = new FXMLLoader();

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="318.0" styleClass="fondo-blanco" stylesheets="@../../estilo/estiloRutas.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CItemsRutasConductor">
+    <children>
+        <VBox prefHeight="138.0" prefWidth="93.0">
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" top="5.0" />
+            </HBox.margin>
+            <children>
+            <Label fx:id="lblidRuta" alignment="CENTER" prefHeight="17.0" prefWidth="93.0" styleClass="estiloLbl" text="idRuta">
+               <VBox.margin>
+                  <Insets top="1.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lblZona" alignment="CENTER" prefHeight="15.0" prefWidth="93.0" styleClass="estiloLbl" text="Zona" />
+                <ImageView fitHeight="48.0" fitWidth="47.0" pickOnBounds="true">
+                    <VBox.margin>
+                        <Insets left="25.0" right="5.0" top="2.0" />
+                    </VBox.margin>
+                    <image>
+                        <Image url="@../../imgRef/Iconos/iconoContacto.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="lblUsuarioA" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" styleClass="estiloLbl" stylesheets="@../../estilo/estiloRutas.css">
+                    <VBox.margin>
+                        <Insets bottom="2.0" left="5.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="lblUsuarioB" alignment="CENTER" prefHeight="17.0" prefWidth="114.0" styleClass="estiloLbl" stylesheets="@../../estilo/estiloRutas.css">
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </Label>
+            <Label fx:id="lblUsuarioC" alignment="CENTER" prefHeight="17.0" prefWidth="114.0" styleClass="estiloLbl" stylesheets="@../../estilo/estiloRutas.css" />
+            </children>
+        </VBox>
+        <VBox prefHeight="148.0" prefWidth="10.0" styleClass="fondo-azul" stylesheets="@../../estilo/estiloRutas.css" />
+        <VBox prefHeight="138.0" prefWidth="74.0">
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../imgRef/Iconos/iconoAuto.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="17.0" right="2.0" top="2.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label fx:id="lblAuto" alignment="CENTER" prefHeight="17.0" prefWidth="74.0" styleClass="estiloLbl" stylesheets="@../../estilo/estiloRutas.css" text="Auto" />
+                <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../imgRef/Iconos/iconoCelular.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="18.0" top="5.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Label fx:id="lblCelular" alignment="CENTER" prefHeight="17.0" prefWidth="74.0" styleClass="estiloLbl" text="Celular" />
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="74.0" styleClass="estiloLbl" text="\$Precio$">
+                    <VBox.margin>
+                        <Insets top="2.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <VBox prefHeight="148.0" prefWidth="10.0" styleClass="fondo-azul" stylesheets="@../../estilo/estiloRutas.css" />
+        <HBox prefHeight="148.0" prefWidth="109.0">
+            <HBox.margin>
+                <Insets bottom="5.0" left="5.0" top="5.0" />
+            </HBox.margin>
+            <children>
+                <VBox prefHeight="138.0" prefWidth="100.0">
+                    <children>
+                        <HBox prefHeight="74.0" prefWidth="100.0">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../imgRef/Iconos/iconoUbicación.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets top="30.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="75.0" styleClass="estiloLbl" text="Encuentro">
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblPtoEncuentro" alignment="CENTER" prefHeight="17.0" prefWidth="77.0" styleClass="estiloLbl" text="PtoEncuentro" />
+                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="75.0" styleClass="estiloLbl" text="Salida" />
+                                        <Label fx:id="lblPtoSalida" alignment="CENTER" prefHeight="17.0" prefWidth="74.0" styleClass="estiloLbl" text="PtoSalida" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="44.0" prefWidth="100.0">
+                            <children>
+                                <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets top="15.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@../../imgRef/Iconos/iconoReloj.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox prefHeight="46.0" prefWidth="76.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="15.0" prefWidth="78.0" styleClass="estiloLbl" text="Hora Llegada" />
+                                        <Label fx:id="lblHLlegada" alignment="CENTER" prefHeight="15.0" prefWidth="77.0" styleClass="estiloLbl" text="Hllegada" />
+                                        <Label alignment="CENTER" prefHeight="15.0" prefWidth="76.0" styleClass="estiloLbl" text="Hora salida" />
+                                        <Label fx:id="lblHSalida" alignment="CENTER" prefHeight="16.0" prefWidth="77.0" styleClass="estiloLbl" text="HSalida" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</HBox>

@@ -79,7 +79,7 @@ public class CAniadirRutasPasajero implements ICInformacion {
     @Override
     public void inicializarInformacion(Object llave) {
         this.llave = (String) llave;
-        rutas = mediadorR.evaluarRutasPasajero(this.llave);
+        rutas = mediadorR.evaluarRutasNoPasajero(this.llave);
         for(RutaConductorDTO r: rutas)
         {
             FXMLLoader fxmlLoaderA = new FXMLLoader();
