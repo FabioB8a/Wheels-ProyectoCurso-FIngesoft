@@ -2,6 +2,7 @@ package wheels.Controlador.CPasajero;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -13,6 +14,8 @@ import wheels.Mediador.MediadorRuta;
 import wheels.Persistencia.Mapper.MapperImpl;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CRutasPasajero implements ICInformacion {
@@ -22,6 +25,8 @@ public class CRutasPasajero implements ICInformacion {
     private GridPane gridPane;
 
     private String llave;
+    @FXML
+    private List<Button> botones = new ArrayList<>();
 
     @Override
     public void inicializarInformacion(Object llave) {
@@ -38,8 +43,11 @@ public class CRutasPasajero implements ICInformacion {
             boton.setPrefHeight(200);
             boton.setStyle("-fx-background-color: #74b4d6");
 
+            botones.add(boton);
             gridPane.add(boton, 0, i + 1);
+
         }
+
     }
 
 
@@ -63,4 +71,5 @@ public class CRutasPasajero implements ICInformacion {
     void btnVolver(ActionEvent event) throws IOException {
         CEscenarios.cambiarVista(event, "VistaPrincipal.fxml");
     }
+
 }
