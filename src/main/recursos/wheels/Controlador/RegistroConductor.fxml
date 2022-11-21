@@ -9,31 +9,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="382.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CRegistroConductor">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CConductor.CRegistroConductor">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="395.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="850.0" prefWidth="360.0" styleClass="fondo-azul" stylesheets="@../estilo/estiloApp.css">
             <children>
                 <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="19.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="54.0">
                     <image>
                         <Image url="@../imgRef/LogoWheels.jpeg" />
                     </image>
                 </ImageView>
-                <Label layoutX="125.0" layoutY="54.0" prefHeight="58.0" prefWidth="250.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="REGISTRO DE" />
-                <Label layoutX="125.0" layoutY="98.0" prefHeight="58.0" prefWidth="250.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="CONDUCTOR" />
-                <Line endX="137.0" layoutX="228.0" layoutY="156.0" startX="-95.0" stroke="WHITE" strokeWidth="3.0" />
-                <TextField fx:id="nombreCompleto" layoutX="75.0" layoutY="216.0" prefHeight="40.0" prefWidth="245.0" promptText="Nombre completo" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.bottomAnchor="744.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="216.0" />
-                <TextField fx:id="cedula" layoutX="75.0" layoutY="282.0" prefHeight="40.0" prefWidth="245.0" promptText="Cedula" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.bottomAnchor="678.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="282.0" />
-                <TextField fx:id="correoInstitucional" layoutX="75.0" layoutY="348.0" prefHeight="40.0" prefWidth="192.0" promptText="Correo Institucional" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="contrasenia" layoutX="75.0" layoutY="410.0" prefHeight="40.0" prefWidth="192.0" promptText="Contraseña" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="universidad" layoutX="75.0" layoutY="474.0" prefHeight="40.0" prefWidth="192.0" promptText="Universidad" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="numTelefono" layoutX="75.0" layoutY="537.0" prefHeight="40.0" prefWidth="192.0" promptText="Telefono" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="marca" layoutX="75.0" layoutY="598.0" prefHeight="40.0" prefWidth="192.0" promptText="Marca" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="modelo" layoutX="75.0" layoutY="660.0" prefHeight="40.0" prefWidth="192.0" promptText="Modelo" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-            <TextField fx:id="placa" layoutX="75.0" layoutY="717.0" prefHeight="40.0" prefWidth="215.0" promptText="Placa" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="numeroPoliza" layoutX="75.0" layoutY="780.0" prefHeight="40.0" prefWidth="192.0" promptText="Numero de poliza" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-                <TextField fx:id="numeroChasis" layoutX="75.0" layoutY="843.0" prefHeight="40.0" prefWidth="192.0" promptText="Numero de chasis" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
-            <Button layoutX="98.0" layoutY="924.0" mnemonicParsing="false" onAction="#btnRegistro" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Registrarse" />
-                <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css">
+                <Label layoutX="168.0" layoutY="7.0" prefHeight="58.0" prefWidth="250.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="REGISTRO DE" />
+                <Label layoutX="180.0" layoutY="54.0" prefHeight="58.0" prefWidth="250.0" styleClass="label-Titulo" stylesheets="@../estilo/estiloRConductorPasajero.css" text="CONDUCTOR" />
+                <Line endX="92.0" layoutX="228.0" layoutY="104.0" startX="-77.0" stroke="WHITE" strokeWidth="3.0" />
+                <TextField fx:id="nombreCompleto" layoutX="65.0" layoutY="190.0" prefHeight="40.0" prefWidth="230.0" promptText="Nombre completo" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="cedula" layoutX="65.0" layoutY="240.0" prefHeight="40.0" prefWidth="230.0" promptText="Cedula" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="correoInstitucional" layoutX="65.0" layoutY="290.0" prefHeight="40.0" prefWidth="230.0" promptText="Correo Institucional" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="contrasenia" layoutX="65.0" layoutY="340.0" prefHeight="40.0" prefWidth="230.0" promptText="Contraseña" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="universidad" layoutX="65.0" layoutY="390.0" prefHeight="40.0" prefWidth="230.0" promptText="Universidad" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="numTelefono" layoutX="65.0" layoutY="440.0" prefHeight="40.0" prefWidth="230.0" promptText="Telefono" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="marca" layoutX="65.0" layoutY="490.0" prefHeight="40.0" prefWidth="230.0" promptText="Marca" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="modelo" layoutX="65.0" layoutY="540.0" prefHeight="40.0" prefWidth="230.0" promptText="Modelo" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+            <TextField fx:id="placa" layoutX="65.0" layoutY="590.0" prefHeight="40.0" prefWidth="230.0" promptText="Placa" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="numeroPoliza" layoutX="65.0" layoutY="640.0" prefHeight="40.0" prefWidth="230.0" promptText="Numero de poliza" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+                <TextField fx:id="numeroChasis" layoutX="65.0" layoutY="690.0" prefHeight="40.0" prefWidth="230.0" promptText="Numero de chasis" styleClass="txtField-Generalizado" stylesheets="@../estilo/estiloRConductorPasajero.css" />
+            <Button layoutX="78.0" layoutY="779.0" mnemonicParsing="false" onAction="#btnRegistro" styleClass="botones" stylesheets="@../estilo/estiloApp.css" text="Registrarse" />
+                <Button layoutX="19.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSalida" styleClass="botonSalida" stylesheets="@../estilo/estiloApp.css">
                     <graphic>
                         <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -43,6 +43,17 @@
                     </graphic>
                 </Button>
             <Label fx:id="lblAdvertencia" layoutX="184.0" layoutY="897.0" textFill="WHITE" />
+            <Button layoutX="151.0" layoutY="121.0" mnemonicParsing="false" onAction="#btnImagen" styleClass="botonImagen" stylesheets="@../estilo/estiloApp.css">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgRef/Iconos/iconoCamara.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fx:id="imgRef" fitHeight="70.0" fitWidth="106.0" layoutX="216.0" layoutY="111.0" pickOnBounds="true" />
+            <Label fx:id="lblAdvertencia" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="748.0" prefHeight="17.0" prefWidth="230.0" styleClass="label-Advertencia" stylesheets="@../estilo/estiloRConductorPasajero.css" />
             </children></AnchorPane>
     </content>
 </ScrollPane>
