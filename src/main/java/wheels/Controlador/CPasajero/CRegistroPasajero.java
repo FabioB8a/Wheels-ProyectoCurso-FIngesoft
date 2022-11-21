@@ -80,9 +80,14 @@ public class CRegistroPasajero {
 
     @FXML
     void btnImagen(ActionEvent event) {
-        FileChooser fileChooser = new FileChooser();
-        File selectedFile = fileChooser.showOpenDialog(null);
-        Image image = new Image(selectedFile.toURI().toString());
-        imgRef.setImage(image);
+        try{
+            FileChooser fileChooser = new FileChooser();
+            File selectedFile = fileChooser.showOpenDialog(null);
+            Image image = new Image(selectedFile.toURI().toString());
+            imgRef.setImage(image);
+        }catch(NullPointerException e)
+        {
+            lblAdvertencia.setText("Seleccione una fotografía, por favor.");
+        }
     }
 }
