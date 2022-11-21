@@ -75,7 +75,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="320.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnVolver" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="16.0">
+            <Button layoutX="306.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnVolver" styleClass="botonMenu" stylesheets="@../estilo/estiloApp.css" AnchorPane.leftAnchor="306.0" AnchorPane.topAnchor="16.0">
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>

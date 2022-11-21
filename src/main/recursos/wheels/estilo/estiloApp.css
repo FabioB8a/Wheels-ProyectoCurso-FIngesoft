@@ -43,6 +43,12 @@
     -fx-background-radius: 80;
 }
 
+.botonMenuSeleccionado{
+    -fx-background-color: #6597b2;
+    -fx-text-fill: #6597b2;
+    -fx-border-radius: 80
+}
+
 .botonMenu:hover{
     -fx-background-color: #6597b2;
     -fx-text-fill: #6597b2;
