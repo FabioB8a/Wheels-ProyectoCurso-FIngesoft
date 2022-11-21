@@ -48,7 +48,8 @@ public class CInicioSesion implements Initializable {
     // Verificación campos de inicio de sesión
     void btnInicioSesion(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 
-        String ruta = "wheels.Controlador.CPasajero.";
+        String rutaP = "wheels.Controlador.CPasajero.";
+        String rutaC = "wheels.Controlador.CConductor.";
 
         // Primero, verificación de campos vacíos
         if (verificacionTexto.verificarTextoVacio(correoElectronico.getText(),contrasenia.getText()))
@@ -62,7 +63,7 @@ public class CInicioSesion implements Initializable {
         {
             if(!mediadorPasajero.evaluarRegistro(correoElectronico.getText(),contrasenia.getText()))
             {
-                CEscenarios.cambiarVistaInfo(event,ruta+"CInicioPasajero","InicioPasajero.fxml",correoElectronico.getText());
+                CEscenarios.cambiarVistaInfo(event,rutaP+"CInicioPasajero","InicioPasajero.fxml",correoElectronico.getText());
                 return;
             }
         }
@@ -71,7 +72,7 @@ public class CInicioSesion implements Initializable {
         {
             if(!mediadorConductor.evaluarRegistro(correoElectronico.getText(),contrasenia.getText()))
             {
-                CEscenarios.cambiarVistaInfo(event,ruta+"CInicioConductor","InicioPasajero.fxml",correoElectronico.getText());
+                CEscenarios.cambiarVistaInfo(event,rutaC+"CInicioConductor","InicioConductor.fxml",correoElectronico.getText());
                 return;
             }
         }
