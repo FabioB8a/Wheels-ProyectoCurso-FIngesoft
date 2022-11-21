@@ -31,6 +31,15 @@ public class MediadorConductor implements IMediadorConductor {
         }
         return true;
     }
+
+    public boolean evaluarRegistro(String correoInstitucional, String contrasenia)
+    {
+        if(contrasenia.equals(conDAO.obtenerContrasena(correoInstitucional))){
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public boolean registrar(ConductorDTO conDTO) {
         conDAO.crear(conDTO);
@@ -44,7 +53,7 @@ public class MediadorConductor implements IMediadorConductor {
 
     @Override
     public Object evaluarContrasena(Object llave) {
-        return conDAO.obtenerConsultaContrasena(llave);
+        return conDAO.obtenerContrasena(llave);
     }
 
     @Override

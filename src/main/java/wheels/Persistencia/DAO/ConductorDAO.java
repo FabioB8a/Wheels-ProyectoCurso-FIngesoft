@@ -68,9 +68,12 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         }
     }
 
-    public String obtenerConsultaContrasena(Object llave) {
-
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("contraseña");
+    public String obtenerContrasena(Object llave) {
+        try{
+            return (String) conductores.find(eq("nombreUsuario",llave)).first().get("contraseña");
+        }catch (RuntimeException e){
+            return null;
+        }
     }
 
     public String obtenerConsultaNombre (Object llave) {

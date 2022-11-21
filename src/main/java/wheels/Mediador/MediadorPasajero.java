@@ -33,6 +33,14 @@ public class MediadorPasajero implements IMediadorPasajero {
         return true;
     }
 
+    public boolean evaluarRegistro(String correoInstitucional, String contrasenia)
+    {
+        if(contrasenia.equals(pasDAO.obtenerContrasena(correoInstitucional))){
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public boolean registrar(PasajeroDTO pasDTO) {
         pasDAO.crear(pasDTO);
@@ -46,7 +54,7 @@ public class MediadorPasajero implements IMediadorPasajero {
 
     @Override
     public Object evaluarContrasena(Object llave) {
-        return pasDAO.obtenerConsultaContrasena(llave);
+        return pasDAO.obtenerContrasena(llave);
     }
 
 

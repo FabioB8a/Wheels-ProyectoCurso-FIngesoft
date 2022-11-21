@@ -13,11 +13,11 @@ public class Verificacion {
         ConductorDAO c = new ConductorDAO();
 
         if (!Objects.equals(p.obtenerConsultaExistencia(correo), "null")) {
-            if(Objects.equals(p.obtenerConsultaContrasena(correo), contrasena)){
+            if(Objects.equals(p.obtenerContrasena(correo), contrasena)){
                 return "pasajero";
             }
         } else if (!Objects.equals(c.obtenerConsultaExistencia(correo), "null")) {
-            if(Objects.equals(c.obtenerConsultaContrasena(correo), contrasena)){
+            if(Objects.equals(c.obtenerContrasena(correo), contrasena)){
                 return "conductor";
             }
         }

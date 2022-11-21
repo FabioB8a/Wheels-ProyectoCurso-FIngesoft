@@ -53,3 +53,8 @@
 .transparent{
     -fx-background-color: rgba(0,0,0,0);
 }
+
+.botonSalida{
+    -fx-background-color: #fff;
+    -fx-background-radius: 80;
+}

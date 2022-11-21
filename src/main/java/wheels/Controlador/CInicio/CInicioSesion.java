@@ -2,20 +2,44 @@ package wheels.Controlador.CInicio;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import wheels.Controlador.CEscenarios;
+import wheels.Mediador.MediadorConductor;
+import wheels.Mediador.MediadorPasajero;
+import wheels.Mediador.VerificacionTexto;
 import wheels.Modelo.*;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class CInicioSesion {
+public class CInicioSesion implements Initializable {
+
+    // Llamado de dos mediadores: Verificación de existencia
+    private static final MediadorPasajero mediadorPasajero = MediadorPasajero.obtenerMediador();
+    private static final MediadorConductor mediadorConductor = MediadorConductor.obtenerMediador();
+    //Llamado de la verifiación: Verificación String (Campos vacíos - Caracteres inválidos - etc)
+    private static final VerificacionTexto verificacionTexto = VerificacionTexto.obtenerVerificacion();
+
+    @FXML
+    private PasswordField contrasenia;
 
     @FXML
     private TextField correoElectronico;
+
     @FXML
-    private PasswordField contrasena;
+    private RadioButton bConductor;
+
+    @FXML
+    private RadioButton bPasajero;
+
+    @FXML
+    private Label lblAdvertencia;
 
     @FXML
     void btnSalida(ActionEvent event) throws IOException {
@@ -23,24 +47,46 @@ public class CInicioSesion {
     }
 
     @FXML
+    // Verificación campos de inicio de sesión
     void btnInicioSesion(ActionEvent event) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 
-        Verificacion verificacion = new Verificacion();
-        Pasajero pasajero = new Pasajero();
-        Conductor conductor = new Conductor();
+        String ruta = "wheels.Controlador.CPasajero.";
 
-        if (verificacion.verificarInicio(correoElectronico.getText(), contrasena.getText()) != null) {
-            if (Objects.equals(verificacion.verificarInicio(correoElectronico.getText(), contrasena.getText()), "pasajero")) {
-                CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CPasajero.CInicioPasajero","InicioPasajero.fxml",correoElectronico.getText());
-                System.out.println("pasajero");
-            } else if (Objects.equals(verificacion.verificarInicio(correoElectronico.getText(), contrasena.getText()), "conductor")){
-                System.out.println("conductor1");
-                CEscenarios.cambiarVistaInfo(event,"wheels.Controlador.CConductor.CInicioConductor","InicioConductor.fxml",correoElectronico.getText());
-                System.out.println("conductor2");
-            }
-
-        } else {
-            System.out.println("usuario y contraseña incorrectos");
+        // Primero, verificación de campos vacíos
+        if (verificacionTexto.verificarTextoVacio(correoElectronico.getText(),contrasenia.getText()))
+        {
+            lblAdvertencia.setText("Recuerda digitar ambos campos");
+            return;
         }
+        // En caso de que no se encuentren vacíos, verifica el botón que presionó el usuario
+        // En caso de seleccionar pasajero, evalúa su existencia en base de datos
+        if (bPasajero.isSelected())
+        {
+            if(!mediadorPasajero.evaluarRegistro(correoElectronico.getText(),contrasenia.getText()))
+            {
+                System.out.println("Hola");
+                CEscenarios.cambiarVistaInfo(event,ruta+"CInicioPasajero","InicioPasajero.fxml",correoElectronico.getText());
+                return;
+            }
+        }
+        // En caso de seleccionar conductor, evalúa su existencia en base de datos
+        if (bConductor.isSelected())
+        {
+            if(!mediadorConductor.evaluarRegistro(correoElectronico.getText(),contrasenia.getText()))
+            {
+                System.out.println("Hola");
+                CEscenarios.cambiarVistaInfo(event,ruta+"CInicioConductor","InicioPasajero.fxml",correoElectronico.getText());
+                return;
+            }
+        }
+        // En caso de no encontrarlo, arroja un mensaje de error al usuario
+        lblAdvertencia.setText("Lo sentimos, no logramos encontrar tu cuenta.");
+    }
+
+    @Override
+    // Inicialización selección de un RadioButton
+    // OBJETIVO: Evitar selección de no error de RadioButton en ToggleGroup
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        bPasajero.setSelected(true);
     }
 }

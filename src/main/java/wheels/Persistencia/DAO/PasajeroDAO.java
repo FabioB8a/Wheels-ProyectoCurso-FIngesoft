@@ -60,9 +60,12 @@ public class PasajeroDAO implements IOperacionesCRUD<PasajeroDTO> {
             return null;
         }
     }
-    public String obtenerConsultaContrasena(Object llave) {
-
-        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("contraseña");
+    public String obtenerContrasena(Object llave) {
+        try{
+            return (String) pasajeros.find(eq("nombreUsuario",llave)).first().get("contraseña");
+        }catch (RuntimeException e){
+            return null;
+        }
     }
     public String obtenerConsultaNombre (Object llave) {
 
