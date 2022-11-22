@@ -32,9 +32,16 @@ public class CItemRutasPasajero implements Initializable {
 
     @FXML
     private Label lblPtoSalida;
+    @FXML
+    private Label lblZona;
+
+    @FXML
+    private Label lblidRuta;
 
     public void setDatos(RutaConductorDTO r, String nombreConductor, String autoConductor, String celularConductor)
     {
+        lblidRuta.setText(r.getIdRuta());
+        lblZona.setText(r.getZona());
         lblAuto.setText(autoConductor);
         lblCelular.setText(celularConductor);
         lblNombre.setText(nombreConductor);

@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="318.0" styleClass="fondo-blanco" stylesheets="@../../estilo/estiloRutas.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wheels.Controlador.CPasajero.CItemRutasPasajero">
     <children>
         <VBox prefHeight="138.0" prefWidth="93.0">
@@ -15,9 +14,11 @@
                 <Insets bottom="5.0" left="5.0" top="5.0" />
             </HBox.margin>
             <children>
+            <Label fx:id="lblidRuta" alignment="CENTER" prefHeight="17.0" prefWidth="90.0" styleClass="estiloLbl" text="idRuta" />
+            <Label fx:id="lblZona" alignment="CENTER" prefHeight="17.0" prefWidth="89.0" styleClass="estiloLbl" text="Zona" />
                 <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true">
                     <VBox.margin>
-                        <Insets left="10.0" right="5.0" top="15.0" />
+                        <Insets left="10.0" right="5.0" top="2.0" />
                     </VBox.margin>
                     <image>
                         <Image url="@../../imgRef/Iconos/iconoContacto.png" />

@@ -12,7 +12,6 @@ public interface IMediadorRuta {
 
     Object evaluarNombreUsuario(Object llave);
     Object evaluarNombreConductor(Object llave);
-
     Object evaluarPuntoOrigen(Object llave);
     Object evaluarPuntoLlegada(Object llave);
     Object evaluarCantPasajeros(Object llave);

@@ -40,7 +40,8 @@ public class CItemsRutasConductor implements Initializable {
     private Label lblZona;
 
     @FXML
-    private Label lblidRuta;public void setDatos(RutaPasajerosDTO r, String nombreConductor, String autoConductor, String celularConductor)
+    private Label lblidRuta;
+    public void setDatos(RutaPasajerosDTO r, String nombreConductor, String autoConductor, String celularConductor)
     {
         lblAuto.setText(autoConductor);
         lblCelular.setText(celularConductor);

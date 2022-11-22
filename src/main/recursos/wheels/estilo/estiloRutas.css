@@ -35,3 +35,9 @@
     -fx-text-fill: #6597b2;
     -fx-background-color: #fdfefe;
 }
+
+.label-Comentario{
+    -fx-font-family: 'Bebas Neue', cursive;
+    -fx-font-size: 20px;
+    -fx-text-fill: #fdfefe;
+}

@@ -21,18 +21,27 @@ public class VerificacionTexto implements IVerificacionTexto{
         return singleton;
     }
 
+    @Override
     public boolean verificarTextoVacio(String...campos)
     {
         return Arrays.stream(campos).anyMatch(n->n.equals(""));
     }
 
     // Expresión Lambda verificación String sea un número
+    @Override
     public boolean verificarEsNumero(String...campos)
     {
         return Arrays.stream(campos).allMatch(n->n.chars().allMatch( Character::isDigit ));
     }
 
     // Función verificación de correo electrónico: Tomado de: <https://www.geeksforgeeks.org/check-email-address-valid-not-java/>
+
+    // Expresión Lambda verificación String sea un correo
+    @Override
+    public boolean verificarEsCorreo(String...campos)
+    {
+        return Arrays.stream(campos).allMatch(VerificacionTexto::esValidoCorreo);
+    }
     private static boolean esValidoCorreo(String correo) {
         String correoRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
                 "[a-zA-Z0-9_+&*-]+)*@" +
@@ -42,11 +51,5 @@ public class VerificacionTexto implements IVerificacionTexto{
         if (correo == null)
             return false;
         return pat.matcher(correo).matches();
-    }
-
-    // Expresión Lambda verificación String sea un correo
-    public boolean verificarEsCorreo(String...campos)
-    {
-        return Arrays.stream(campos).allMatch(VerificacionTexto::esValidoCorreo);
     }
 }
