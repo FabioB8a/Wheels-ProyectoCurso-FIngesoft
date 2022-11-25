@@ -5,6 +5,7 @@ module wheels.wheels {
     requires org.mongodb.driver.core;
     requires org.mongodb.bson;
     requires java.management;
+    requires lombok;
 
 
     opens wheels.Controlador to javafx.fxml;
