@@ -42,56 +42,60 @@ public class PasajeroDAO implements IOperacionesCRUD<PasajeroDTO> {
     public String obtenerConsulta(Object llave) {
         return null;
     }
-
     @Override
     public List<PasajeroDTO> obtenerConsultas() {
         return null;
     }
-
     public String obtenerConsultaExistencia(Object llave) {
-
-        return String.valueOf(pasajeros.find(eq("nombreUsuario", llave)).first());
+        try {
+            return String.valueOf(pasajeros.find(eq("nombreUsuario", llave)).first());
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-
     public String obtenerCorreo(Object llave) {
-        try{
-            return (String) pasajeros.find(eq("nombreUsuario",llave)).first().get("nombreUsuario");
-        }catch (RuntimeException e){
+        try {
+            return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("nombreUsuario");
+        } catch (RuntimeException e) {
             return null;
         }
     }
     public String obtenerContrasena(Object llave) {
-        try{
-            return (String) pasajeros.find(eq("nombreUsuario",llave)).first().get("contraseña");
-        }catch (RuntimeException e){
+        try {
+            return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("contraseña");
+        } catch (RuntimeException e) {
             return null;
         }
     }
-    public String obtenerConsultaNombre (Object llave) {
-
-        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("nombreCompleto");
+    public String obtenerConsultaNombre(Object llave) {
+        try {
+            return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("nombreCompleto");
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaUniversidad (Object llave) {
-
-        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("universidad");
+    public String obtenerConsultaUniversidad(Object llave) {
+        try {
+            return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("universidad");
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaTelefono (Object llave) {
-
-        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("telefono");
+    public String obtenerConsultaTelefono(Object llave) {
+        try {
+            return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("telefono");
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaCodigo (Object llave) {
-
-        return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("codigo");
+    public String obtenerConsultaCodigo(Object llave) {
+        try {
+            return (String) pasajeros.find(eq("nombreUsuario", llave)).first().get("codigo");
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-
-
 }
-
-
-
-
-
-
 
 
 

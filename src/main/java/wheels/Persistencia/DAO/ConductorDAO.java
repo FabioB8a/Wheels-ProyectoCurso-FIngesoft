@@ -84,8 +84,11 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         }
     }
     public String obtenerConsultaUniversidad (Object llave) {
-
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("universidad");
+        try {
+            return (String) conductores.find(eq("nombreUsuario", llave)).first().get("universidad");
+        }catch (RuntimeException e){
+            return null;
+        }
     }
     public String obtenerConsultaTelefono (Object llave) {
         try{
@@ -95,16 +98,28 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         }
     }
     public String obtenerConsultaCedula (Object llave) {
+try {
+    return (String) conductores.find(eq("nombreUsuario", llave)).first().get("cedulaConductor");
 
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("cedulaConductor");
+}catch (RuntimeException e){
+    return null;
+}
     }
     public String obtenerConsultaMarca (Object llave) {
+try {
+    return (String) conductores.find(eq("nombreUsuario", llave)).first().get("marcaAuto");
 
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("marcaAuto");
+} catch (RuntimeException e){
+            return null;
+        }
     }
     public String obtenerConsultaModelo (Object llave) {
+try {
+    return (String) conductores.find(eq("nombreUsuario", llave)).first().get("modeloAuto");
 
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("modeloAuto");
+}catch (RuntimeException e){
+    return null;
+}
     }
     public String obtenerConsultaPlaca (Object llave) {
         try{
@@ -114,12 +129,19 @@ public class ConductorDAO implements  IOperacionesCRUD<ConductorDTO>{
         }
     }
     public String obtenerConsultaPoliza (Object llave) {
+try {
+    return (String) conductores.find(eq("nombreUsuario", llave)).first().get("polizaAuto");
 
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("polizaAuto");
+}catch (RuntimeException e){
+    return null;
+}
     }
     public String obtenerConsultaChasis (Object llave) {
-
-        return (String) conductores.find(eq("nombreUsuario", llave)).first().get("chasisAuto");
+try {
+    return (String) conductores.find(eq("nombreUsuario", llave)).first().get("chasisAuto");
+}
+    catch (RuntimeException e){
+            return null;
+        }
     }
-
 }

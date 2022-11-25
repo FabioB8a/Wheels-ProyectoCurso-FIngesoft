@@ -9,6 +9,7 @@ import wheels.Persistencia.Conexion.Conexion;
 import wheels.Persistencia.DTO.RutaConductorDTO;
 import wheels.Persistencia.DTO.RutaPasajerosDTO;
 import wheels.Persistencia.Mapper.MapperImpl;
+
 import static com.mongodb.client.model.Filters.eq;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.List;
 
 import static javax.management.Query.eq;
 
-public class RutaDAO implements  IOperacionesCRUD<RutaConductorDTO>{
+public class RutaDAO implements IOperacionesCRUD<RutaConductorDTO> {
 
     private static final Conexion conexion = Conexion.obtenerConexion();
     private static final MapperImpl mapper = MapperImpl.obtenerMapperImpl();
@@ -31,7 +32,7 @@ public class RutaDAO implements  IOperacionesCRUD<RutaConductorDTO>{
 
     @Override
     public void eliminar(Object llave) {
-        rutas.deleteOne(Filters.eq("idRuta",llave.toString()));
+        rutas.deleteOne(Filters.eq("idRuta", llave.toString()));
     }
 
     @Override
@@ -54,37 +55,34 @@ public class RutaDAO implements  IOperacionesCRUD<RutaConductorDTO>{
 
     // Consultas necesarias a utilizar
 
-    public ArrayList<RutaConductorDTO> consultarRutasPasajero(String nombrePasajero)
-    {
-        BasicDBObject consultaNombre=new BasicDBObject("Usuarios",nombrePasajero);
+    public ArrayList<RutaConductorDTO> consultarRutasPasajero(String nombrePasajero) {
+        BasicDBObject consultaNombre = new BasicDBObject("Usuarios", nombrePasajero);
 
         FindIterable<Document> rutasRef = rutas.find(consultaNombre);
 
-        ArrayList<RutaConductorDTO> rutasRetorno=mapper.DRPasajeroDTO(rutasRef);
+        ArrayList<RutaConductorDTO> rutasRetorno = mapper.DRPasajeroDTO(rutasRef);
 
         return rutasRetorno;
     }
 
-    public ArrayList<RutaConductorDTO> consultarRutasNoPasajero(String nombrePasajero)
-    {
-        BasicDBObject consultaBusqueda = new BasicDBObject("Usuarios",new BasicDBObject("$ne", nombrePasajero));
+    public ArrayList<RutaConductorDTO> consultarRutasNoPasajero(String nombrePasajero) {
+        BasicDBObject consultaBusqueda = new BasicDBObject("Usuarios", new BasicDBObject("$ne", nombrePasajero));
 
         FindIterable<Document> rutasRef = rutas.find(consultaBusqueda);
 
-        ArrayList<RutaConductorDTO> rutasRetorno=mapper.DRPasajeroDTO(rutasRef);
+        ArrayList<RutaConductorDTO> rutasRetorno = mapper.DRPasajeroDTO(rutasRef);
 
         return rutasRetorno;
     }
-    public ArrayList<RutaPasajerosDTO> consultarRutasConductores(String nombreConductor)
-    {
-        BasicDBObject consultaNombre=new BasicDBObject("nombreConductor",nombreConductor);
+
+    public ArrayList<RutaPasajerosDTO> consultarRutasConductores(String nombreConductor) {
+        BasicDBObject consultaNombre = new BasicDBObject("nombreConductor", nombreConductor);
         FindIterable<Document> rutasRef = rutas.find(consultaNombre);
         ArrayList<RutaPasajerosDTO> rutasRetorno = mapper.DRConductorDTO(rutasRef);
         return rutasRetorno;
     }
 
-    public void aniadirPasajero(String idRuta, String nombrePasajero)
-    {
+    public void aniadirPasajero(String idRuta, String nombrePasajero) {
         BasicDBObject consultaBusqueda = new BasicDBObject();
         consultaBusqueda.append("idRuta", idRuta);
 
@@ -92,62 +90,105 @@ public class RutaDAO implements  IOperacionesCRUD<RutaConductorDTO>{
         consultaActualizacion.append("$push",
                 new BasicDBObject().append("Usuarios", nombrePasajero));
 
-        rutas.findOneAndUpdate(consultaBusqueda,consultaActualizacion);
+        rutas.findOneAndUpdate(consultaBusqueda, consultaActualizacion);
     }
 
-    public String obteneridRuta(Object llave){
-        try{
-            return (String) rutas.find(eq("idRuta",llave)).first().get("idRuta");
-        }catch (RuntimeException e){
+    public String obteneridRuta(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("idRuta");
+        } catch (RuntimeException e) {
             return null;
         }
     }
 
-    public String obtenerRutaPasajero(Object nombrePasajero, Object idRuta){
-        try{
+    public String obtenerRutaPasajero(Object nombrePasajero, Object idRuta) {
+        try {
             BasicDBObject consultaBusqueda = new BasicDBObject();
             consultaBusqueda.append("Usuarios", nombrePasajero);
             consultaBusqueda.append("idRuta", idRuta);
             return (String) rutas.find(consultaBusqueda).first().get("idRuta");
-        }catch (RuntimeException e){
+        } catch (RuntimeException e) {
             return null;
         }
     }
-    public String obtenerConsultaNombreUsuario (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("Usuarios");
+    public String obtenerConsultaNombreUsuario(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("Usuarios");
+        } catch (RuntimeException e) {
+            return null;
+        }
+
     }
-    public String obtenerConsultaNombreConductor (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("nombreConductor");
+    public String obtenerConsultaNombreConductor(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("nombreConductor");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaPuntoOrigen (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("puntoOrigen");
+    public String obtenerConsultaPuntoOrigen(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("puntoOrigen");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaPuntoLlegada (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("puntoLlegada");
+    public String obtenerConsultaPuntoLlegada(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("puntoLlegada");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaCantPasajeros (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("cantPasajeros");
+    public String obtenerConsultaCantPasajeros(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("cantPasajeros");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaHoraLlegada (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("horaLlegada");
+    public String obtenerConsultaHoraLlegada(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("horaLlegada");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaHoraSalida (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("horaSalida");
+    public String obtenerConsultaHoraSalida(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("horaSalida");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public String obtenerConsultaZona (Object llave) {
 
-        return (String) rutas.find(eq("idRuta", llave)).first().get("zona");
+    public String obtenerConsultaZona(Object llave) {
+        try {
+            return (String) rutas.find(eq("idRuta", llave)).first().get("zona");
+
+        } catch (RuntimeException e) {
+            return null;
+        }
     }
-    public int obtenerTamanioRutas () {
 
-        return  (int) rutas.countDocuments();
+    public int obtenerTamanioRutas() {
+
+        return (int) rutas.countDocuments();
+
+
     }
 
 
