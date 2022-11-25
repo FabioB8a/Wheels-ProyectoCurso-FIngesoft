@@ -1,14 +1,31 @@
 package wheels.Persistencia.DTO;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
 public class ConductorDTO extends UsuarioDTO {
 
+
+    @Getter
+    @Setter
     private String cedulaConductor;
+    @Getter
+    @Setter
     private String marcaAuto;
+    @Getter
+    @Setter
     private String modeloAuto;
+    @Getter
+    @Setter
     private String placaAuto;
+    @Getter
+    @Setter
     private String polizaAuto;
+    @Getter
+    @Setter
     private String chasisAuto;
 
 
@@ -22,56 +39,5 @@ public class ConductorDTO extends UsuarioDTO {
         this.chasisAuto = chasisAuto;
 
     }
-
-    public String getCedulaConductor() {
-        return cedulaConductor;
-    }
-
-    public String getMarcaAuto() {
-        return marcaAuto;
-    }
-
-    public String getModeloAuto() {
-        return modeloAuto;
-    }
-
-    public String getPlacaAuto() {
-        return placaAuto;
-    }
-
-    public String getPolizaAuto() {
-        return polizaAuto;
-    }
-
-    public String getChasisAuto() {
-        return chasisAuto;
-    }
-
-
-
-    public void setCedulaConductor(String cedulaConductor) {
-        this.cedulaConductor = cedulaConductor;
-    }
-
-    public void setMarcaAuto(String marcaAuto) {
-        this.marcaAuto = marcaAuto;
-    }
-
-    public void setModeloAuto(String modeloAuto) {
-        this.modeloAuto = modeloAuto;
-    }
-
-    public void setPlacaAuto(String placaAuto) {
-        this.placaAuto = placaAuto;
-    }
-
-    public void setPolizaAuto(String polizaAuto) {
-        this.polizaAuto = polizaAuto;
-    }
-
-    public void setChasisAuto(String chasisAuto) {
-        this.chasisAuto = chasisAuto;
-    }
-
 
 }
